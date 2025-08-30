@@ -23,4 +23,4 @@ Aquí encontrarás:
 ---
 
 📌 **Nota**: Este es un proyecto puramente informativo y sin fines de lucro, hecho con HTML y CSS.  
-👑 **Herederos**: Leandro Fernández y Angelo Lemus
+👑 **CEOs**: Victor Escalante, Leandro Fernández y Angelo Lemus
