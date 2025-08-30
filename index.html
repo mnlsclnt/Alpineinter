@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpine Academy Intercontinental Series</title>
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg,#001f3f,#0074D9);
+      color:#fff;
+    }
+    header{
+      background: rgba(0,0,0,0.7);
+      padding:10px 20px;
+      position: sticky; top:0; z-index:1000;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    header h1{ margin:0; font-size:1.1rem; }
+    nav ul{ list-style:none; display:flex; gap:16px; margin:0; padding:0; }
+    nav a{ color:#fff; text-decoration:none; font-weight:bold; }
+    nav a:hover{ color:#FFD700; }
+    .menu-toggle{ display:none; flex-direction:column; cursor:pointer; }
+    .menu-toggle div{ width:25px; height:3px; background:#fff; margin:4px 0; }
+    @media(max-width:768px){
+      nav ul{ display:none; flex-direction:column; background:rgba(0,0,0,0.9); position:absolute; right:20px; top:58px; border-radius:10px; width:calc(100% - 40px); max-width:320px; padding:12px; }
+      nav ul.active{ display:flex; }
+      .menu-toggle{ display:flex; }
+    }
+    main{ max-width:1200px; margin:20px auto; padding:0 16px; }
+    .intro{
+      text-align:center;
+      margin-bottom:30px;
+    }
+    .intro h2{ color:#FFD700; margin-bottom:12px; }
+    .intro p{ font-size:1.1rem; line-height:1.6; }
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap:20px;
+    }
+    .card{
+      background:rgba(0,0,0,0.55);
+      border-radius:15px;
+      overflow:hidden;
+      text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+      transition: transform .3s;
+    }
+    .card:hover{ transform:scale(1.03); }
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+    .card h3{ color:#FFD700; margin:12px 0 6px; }
+    .card p{ padding:0 12px 16px; font-size:0.95rem; }
+    footer{
+      background: rgba(0,0,0,0.85);
+      text-align:center;
+      padding:18px;
+      font-size:0.95rem;
+      margin-top:40px;
+    }
+    footer a{ color:#4cc9f0; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Alpine Academy Intercontinental Series</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div><div></div><div></div>
+    </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="f1.html">F1</a></li>
+        <li><a href="f2.html">F2</a></li>
+        <li><a href="f3.html">F3</a></li>
+        <li><a href="f4.html">F4</a></li>
+        <li><a href="f5.html">F5</a></li>
+        <li><a href="historia.html">Historia</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Bienvenidos a Alpine Academy</h2>
+      <p>
+        Desde la Temporada 47 de la Intercontinental Series, Alpine Academy ha sido más que un equipo:
+        somos una <strong>academia de formación y mentoría</strong>.  
+        Nuestro lema es claro: <em>"No buscamos a los mejores, los hacemos mejores"</em>.  
+        Con títulos en F1, F2, F4 y campeones formados en todas las categorías, hemos creado un legado
+        que transforma pilotos en líderes y CEOs en referentes.
+      </p>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <img src="imagenes/equipo.jpg" alt="Equipo Alpine"/>
+        <h3>El Equipo</h3>
+        <p>
+          Una familia que compite unida desde F5 hasta F1, apoyando el desarrollo integral de cada piloto.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="imagenes/victoria.jpg" alt="Victoria en F1"/>
+        <h3>Logros</h3>
+        <p>
+          Campeonatos de constructores en F1, F2 y F4.  
+          Pilotos que comenzaron en F5 y hoy ganan en la máxima categoría.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="imagenes/mentoria.jpg" alt="Mentoría Alpine"/>
+        <h3>Mentoría</h3>
+        <p>
+          Formamos CEOs y pilotos que luego brillan en sus propios equipos.  
+          Nuestro legado trasciende la pista.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="imagenes/charles_evans.jpg" alt="Charles Evans en Alpine"/>
+        <h3>Estrellas</h3>
+        <p>
+          Desde talentos emergentes hasta campeones mundiales como Charles Evans, todos encuentran en Alpine un hogar.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Alpine Academy Intercontinental Series – Basado en la liga Intercontinental Series del videojuego iGP Manager.
+    <br/>Herederos: Leandro Fernández y Angelo Lemus.
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', ()=> menu.classList.toggle('active'));
+  </script>
+</body>
+</html>
