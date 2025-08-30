@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine BWT Juniors - F5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="f5-page">
+
+  <!-- Botón menú hamburguesa -->
+  <header>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <h1>Alpine BWT Juniors - F5</h1>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav id="side-menu" class="side-menu">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="f1.html">F1</a>
+    <a href="f2.html">F2</a>
+    <a href="f3.html">F3</a>
+    <a href="f4.html">F4</a>
+    <a href="f5.html">F5</a>
+    <a href="k6.html">K6</a>
+    <a href="trofeos.html">🏆 Trofeos</a>
+    <a href="historia.html">📖 Historia</a>
+  </nav>
+
+  <!-- Contenido -->
+  <main>
+    <section>
+      <h2>Pilotos Titulares</h2>
+      <div class="pilotos">
+        <div class="piloto-card">
+          <img src="img/rafael.jpg" alt="Rafael Costa">
+          <p>🇹🇷 Rafael Costa (Turquía)</p>
+        </div>
+        <div class="piloto-card">
+          <img src="img/mick.jpg" alt="Mick Sol">
+          <p>🇦🇷 Mick Sol (Argentina)</p>
+        </div>
+        <div class="piloto-card">
+          <img src="img/guido.jpg" alt="Guido Lima">
+          <p>🇵🇪 Guido Lima (Perú)</p>
+        </div>
+        <div class="piloto-card">
+          <img src="img/saul.jpg" alt="Saul González">
+          <p>🇪🇸 Saúl González (España)</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sobre el Equipo</h2>
+      <p>
+        Alpine BWT Juniors es el equipo que representa la categoría F5 en la Alpine Academy Intercontinental Series.  
+        Es la cantera más joven del programa, donde los pilotos inician su carrera dentro del universo Alpine.  
+        Sus colores predominantes son <b>rosa</b> con toques de <b>blanco</b> y <b>azul</b>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>⚡ Alpine Academy Intercontinental Series – Basado en iGPManager ⚡</p>
+    <p>Herederos: Leandro Fernández & Angelo Lemus</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('side-menu');
+      menu.classList.toggle('open');
+    }
+    // cerrar el menú al hacer clic en un enlace
+    document.querySelectorAll('.side-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('side-menu').classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
