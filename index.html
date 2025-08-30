@@ -1,86 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alpine Racing Team</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Alpine Academy</title>
+  <style>
+  /* --- Navbar Base --- */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0d1b2a;
+    padding: 10px 20px;
+  }
+  .navbar .logo { color: #fff; font-weight: bold; font-size: 18px; }
+  .navbar .menu { list-style: none; display: flex; gap: 15px; }
+  .navbar .menu li a { color: #fff; text-decoration: none; font-size: 16px; }
+  .navbar .menu li a:hover { color: #4cc9f0; }
+  .menu-toggle { display: none; font-size: 22px; background: none; border: none; color: #fff; cursor: pointer; }
+  @media (max-width: 768px) {
+    .menu { display: none; flex-direction: column; width: 100%; background: #0d1b2a; margin-top: 10px; }
+    .menu.show { display: flex; }
+    .menu-toggle { display: block; }
+  }
+  </style>
 </head>
 <body>
-  <!-- Menú hamburguesa -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">🏎️ Alpine Racing</div>
-      <button class="hamburger" id="hamburger">☰</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#inicio">🏁 Inicio</a></li>
-        <li><a href="#historia">📖 Historia</a></li>
-        <li><a href="#equipos">👥 Equipos</a></li>
-        <li><a href="trofeos.html">🏆 Trofeos</a></li>
-        <li><a href="#redes">🌐 Redes</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Sección Inicio -->
-  <section id="inicio" class="inicio">
-    <h1 class="bounce">👋 Bienvenido al Alpine Racing Team</h1>
-    <p>Academia y escudería oficial de la liga <strong>Intercontinental Series</strong> en IGP Manager.</p>
-  </section>
-
-  <!-- Sección Historia resumida -->
-  <section id="historia">
-    <h2>📖 Historia</h2>
-    <p>
-      Alpine Racing Team es una escudería con presencia en múltiples categorías de la 
-      <strong>Intercontinental Series</strong>. Desde F1 hasta K6, el equipo ha formado a pilotos de 
-      élite y ha ganado múltiples trofeos en su trayectoria.  
-    </p>
-    <a class="btn" href="historia.html">Leer historia completa ➝</a>
-  </section>
-
-  <!-- Sección Equipos -->
-  <section id="equipos">
-    <h2>👥 Equipos</h2>
-    <div class="equipos-grid">
-      <a href="f1.html" class="equipo f1">Alpine F1 - Royal Air Maroc</a>
-      <a href="f2.html" class="equipo f2">Alpine Citroën (F2)</a>
-      <a href="f3.html" class="equipo f3">Alpine Mitsubishi (F3)</a>
-      <a href="f4.html" class="equipo f4">Alpine BWT Academy (F4)</a>
-      <a href="f5.html" class="equipo f5">Alpine BWT Juniors (F5)</a>
-      <a href="k6.html" class="equipo k6">Alpine Galaxy (K6)</a>
-    </div>
-  </section>
-
-  <!-- Sección Redes -->
-  <section id="redes">
-    <h2>🌐 Redes del equipo</h2>
-    <p>Síguenos en nuestras redes sociales para estar al tanto de cada carrera:</p>
-    <ul class="redes-lista">
-      <li>📸 Instagram: <a href="#">@AlpineRacingIGP</a></li>
-      <li>🐦 Twitter/X: <a href="#">@AlpineRacingTeam</a></li>
-      <li>▶️ YouTube: <a href="#">Alpine Racing TV</a></li>
-    </ul>
-  </section>
-<section id="trofeos">
-  <h2>🏆 Trofeos por categoría</h2>
-  <ul style="list-style:none; padding:0; margin:1rem auto; max-width:600px;">
-    <li style="margin:.4rem 0;"><a href="trofeos-f1.html">F1 – Alpine</a></li>
-    <li style="margin:.4rem 0;"><a href="trofeos-f2.html">F2 – Citroën Alpine</a></li>
-    <li style="margin:.4rem 0;"><a href="trofeos-f3.html">F3 – Alpine Mitsubishi</a></li>
-    <li style="margin:.4rem 0;"><a href="trofeos-f4.html">F4 – Alpine Academy</a></li>
-    <li style="margin:.4rem 0;"><a href="trofeos-f5.html">F5 – Alpine Juniors</a></li>
-    <li style="margin:.4rem 0;"><a href="trofeos-k6.html">K6 – Alpine Galaxy</a></li>
+<nav class="navbar">
+  <div class="logo">Alpine Academy</div>
+  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  <ul class="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="f1.html">F1</a></li>
+    <li><a href="f2.html">F2</a></li>
+    <li><a href="f3.html">F3</a></li>
+    <li><a href="f4.html">F4</a></li>
+    <li><a href="f5.html">F5</a></li>
+    <li><a href="historia.html">Historia</a></li>
   </ul>
-  <p style="margin-top:1rem;">
-    👉 ¿Todos juntos? Ve la <a href="trofeos.html">lista completa de trofeos</a>.
-  </p>
-</section>
+</nav>
 
-  <footer>
-    <p>© 2025 Alpine Racing Team - Intercontinental Series</p>
-  </footer>
+<h1>Bienvenido a Alpine Academy</h1>
+<p>Contenido principal de la página de inicio...</p>
 
-  <script src="script.js"></script>
+<script>
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+toggleBtn.addEventListener('click', () => menu.classList.toggle('show'));
+</script>
 </body>
 </html>
