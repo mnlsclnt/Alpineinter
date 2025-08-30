@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine Citroën - F2</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #b0b0b0, #ffffff, #e3a1d5, #7db3e7);
+      color: #222;
+    }
+    header {
+      background: #444;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0.5rem 0;
+    }
+    .pilotos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .piloto {
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .piloto img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      border: 3px solid #999;
+    }
+    .bandera {
+      font-size: 1.5rem;
+      margin-left: 8px;
+    }
+    nav {
+      text-align: center;
+      padding: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏎️ Alpine Citroën - F2</h1>
+    <p>Segunda categoría del equipo Alpine en la Intercontinental Series</p>
+  </header>
+
+  <main>
+    <section>
+      <h2 style="text-align:center;">Pilotos Titulares</h2>
+      <div class="pilotos">
+        <div class="piloto">
+          <img src="img/angelo_lemus.jpg" alt="Angelo Lemus">
+          <h3>Angelo Lemus 🇲🇽</h3>
+        </div>
+        <div class="piloto">
+          <img src="img/renato_gaspar.jpg" alt="Renato Gaspar">
+          <h3>Renato Gaspar 🇧🇷</h3>
+        </div>
+        <div class="piloto">
+          <img src="img/raul_de_leon.jpg" alt="Raúl de León">
+          <h3>Raúl de León 🇲🇽</h3>
+        </div>
+        <div class="piloto">
+          <img src="img/victor_yanacon.jpg" alt="Victor Yanacon">
+          <h3>Victor Yanacon 🇦🇷</h3>
+        </div>
+      </div>
+    </section>
+
+    <section style="text-align:center; padding:2rem;">
+      <h2>🏆 Trofeos de Alpine F2</h2>
+      <p><a href="trofeos-f2.html">Ver lista completa de trofeos F2 →</a></p>
+    </section>
+  </main>
+
+  <nav>
+    <a href="index.html">🏠 Inicio</a>
+    <a href="f1.html">F1</a>
+    <a href="f2.html">F2</a>
+    <a href="f3.html">F3</a>
+    <a href="f4.html">F4</a>
+    <a href="f5.html">F5</a>
+    <a href="k6.html">K6</a>
+  </nav>
+</body>
+</html>
