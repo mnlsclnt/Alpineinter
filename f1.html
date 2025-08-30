@@ -3,43 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F1 - Alpine Academy</title>
+  <title>F1 - Alpine Academy Intercontinental Series</title>
   <style>
-  .navbar { display: flex; justify-content: space-between; align-items: center; background: #0d1b2a; padding: 10px 20px; }
-  .navbar .logo { color: #fff; font-weight: bold; font-size: 18px; }
-  .navbar .menu { list-style: none; display: flex; gap: 15px; }
-  .navbar .menu li a { color: #fff; text-decoration: none; font-size: 16px; }
-  .navbar .menu li a:hover { color: #4cc9f0; }
-  .menu-toggle { display: none; font-size: 22px; background: none; border: none; color: #fff; cursor: pointer; }
-  @media (max-width: 768px) {
-    .menu { display: none; flex-direction: column; width: 100%; background: #0d1b2a; margin-top: 10px; }
-    .menu.show { display: flex; }
-    .menu-toggle { display: block; }
-  }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #001f3f;
+      color: #fff;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h1, h2, h3 {
+      color: #001f3f;
+    }
+    footer {
+      background: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+      nav ul.showing {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>
-<nav class="navbar">
-  <div class="logo">Alpine Academy</div>
-  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-  <ul class="menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="f1.html">F1</a></li>
-    <li><a href="f2.html">F2</a></li>
-    <li><a href="f3.html">F3</a></li>
-    <li><a href="f4.html">F4</a></li>
-    <li><a href="f5.html">F5</a></li>
-    <li><a href="historia.html">Historia</a></li>
-  </ul>
-</nav>
+  <header>
+    <div class="container">
+      <h1 style="margin:0;">Alpine Academy - F1</h1>
+      <span class="menu-toggle">☰</span>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="f1.html">F1</a></li>
+          <li><a href="f2.html">F2</a></li>
+          <li><a href="f3.html">F3</a></li>
+          <li><a href="f4.html">F4</a></li>
+          <li><a href="f5.html">F5</a></li>
+          <li><a href="trofeos.html">Trofeos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<h1>Fórmula 1</h1>
-<p>Contenido sobre la F1 de Alpine Academy...</p>
+  <main>
+    <section>
+      <h2>Historia de la F1</h2>
+      <p>El equipo <strong>Alpine Academy F1</strong> representa la máxima categoría de la academia. 
+      Desde su fundación en la Temporada 47, ha sido el estandarte de la organización, compitiendo contra 
+      los mejores del mundo en la liga Intercontinental Series de iGP Manager.</p>
+    </section>
 
-<script>
-const toggleBtn = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-toggleBtn.addEventListener('click', () => menu.classList.toggle('show'));
-</script>
+    <section>
+      <h2>Pilotos Titulares</h2>
+      <ul>
+        <li>Leandro Fernández – CEO y piloto principal</li>
+        <li>Angelo Lemus – Estratega y segundo piloto</li>
+        <li>Charles Evans – Campeón Mundial y piloto invitado</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Trofeos de F1</h2>
+      <p>Consulta todos los títulos de esta categoría en la <a href="trofeos-f1.html">página de trofeos de F1</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Alpine Academy Intercontinental Series – Basado en la liga Intercontinental Series del videojuego iGP Manager</p>
+    <p>Herederos: Leandro Fernández y Angelo Lemus</p>
+    <p>Síguenos en redes: 
+      <a href="#">Twitter</a> | 
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('showing');
+    });
+  </script>
 </body>
 </html>
