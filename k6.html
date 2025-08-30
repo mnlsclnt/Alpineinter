@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine Galaxy - K6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="k6-page">
+
+  <!-- Botón menú hamburguesa -->
+  <header>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <h1>Alpine Galaxy - K6</h1>
+  </header>
+
+  <!-- Menú lateral -->
+  <nav id="side-menu" class="side-menu">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="f1.html">F1</a>
+    <a href="f2.html">F2</a>
+    <a href="f3.html">F3</a>
+    <a href="f4.html">F4</a>
+    <a href="f5.html">F5</a>
+    <a href="k6.html">K6</a>
+    <a href="trofeos.html">🏆 Trofeos</a>
+    <a href="historia.html">📖 Historia</a>
+  </nav>
+
+  <!-- Contenido -->
+  <main>
+    <section>
+      <h2>Pilotos Titulares</h2>
+      <div class="pilotos">
+        <div class="piloto-card">
+          <img src="img/ryoga.jpg" alt="Ryoga Arias">
+          <p>🇵🇪 Ryoga Arias (Perú)</p>
+        </div>
+        <div class="piloto-card">
+          <img src="img/juanpa.jpg" alt="Juampa Velázquez">
+          <p>🇦🇷 Juampa Velázquez (Argentina)</p>
+        </div>
+        <div class="piloto-card">
+          <img src="img/marcos.jpg" alt="Marcos Ezequiel">
+          <p>🇦🇷 Marcos Ezequiel (Argentina)</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sobre el Equipo</h2>
+      <p>
+        Alpine Galaxy es el equipo encargado de la categoría K6 dentro de la Alpine Academy Intercontinental Series.  
+        Representa la última fase de formación de jóvenes pilotos, preparándolos para dar el salto a categorías superiores.  
+        Sus colores predominantes son <b>rosa</b> con un toque de <b>azul</b>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>⚡ Alpine Academy Intercontinental Series – Basado en iGPManager ⚡</p>
+    <p>Herederos: Leandro Fernández & Angelo Lemus</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('side-menu');
+      menu.classList.toggle('open');
+    }
+    // cerrar el menú al hacer clic en un enlace
+    document.querySelectorAll('.side-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('side-menu').classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
