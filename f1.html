@@ -3,49 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpine F1</title>
-  <link rel="stylesheet" href="style.css">
+  <title>F1 - Alpine Academy</title>
+  <style>
+  .navbar { display: flex; justify-content: space-between; align-items: center; background: #0d1b2a; padding: 10px 20px; }
+  .navbar .logo { color: #fff; font-weight: bold; font-size: 18px; }
+  .navbar .menu { list-style: none; display: flex; gap: 15px; }
+  .navbar .menu li a { color: #fff; text-decoration: none; font-size: 16px; }
+  .navbar .menu li a:hover { color: #4cc9f0; }
+  .menu-toggle { display: none; font-size: 22px; background: none; border: none; color: #fff; cursor: pointer; }
+  @media (max-width: 768px) {
+    .menu { display: none; flex-direction: column; width: 100%; background: #0d1b2a; margin-top: 10px; }
+    .menu.show { display: flex; }
+    .menu-toggle { display: block; }
+  }
+  </style>
 </head>
-<body class="f1-page">
+<body>
+<nav class="navbar">
+  <div class="logo">Alpine Academy</div>
+  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  <ul class="menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="f1.html">F1</a></li>
+    <li><a href="f2.html">F2</a></li>
+    <li><a href="f3.html">F3</a></li>
+    <li><a href="f4.html">F4</a></li>
+    <li><a href="f5.html">F5</a></li>
+    <li><a href="historia.html">Historia</a></li>
+  </ul>
+</nav>
 
-  <header>
-    <h1>Alpine F1 🏎️</h1>
-    <a href="index.html">⬅ Volver al inicio</a>
-  </header>
+<h1>Fórmula 1</h1>
+<p>Contenido sobre la F1 de Alpine Academy...</p>
 
-  <section>
-    <h2>Pilotos Titulares</h2>
-    <div class="drivers">
-      <div class="driver">
-        <img src="pilotos/charles_evans.jpg" alt="Charles Evans">
-        <p>Charles Evans 🇲🇦 (Marruecos)</p>
-      </div>
-      <div class="driver">
-        <img src="pilotos/victor_escalante.jpg" alt="Victor Escalante">
-        <p>Victor Escalante 🇲🇽 (México)</p>
-      </div>
-      <div class="driver">
-        <img src="pilotos/ivan_flamini.jpg" alt="Iván Flamini">
-        <p>Iván Flamini 🇦🇷 (Argentina)</p>
-      </div>
-      <div class="driver">
-        <img src="pilotos/mauro_gentile.jpg" alt="Mauro Gentile">
-        <p>Mauro Gentile 🇦🇷 (Argentina)</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Trofeos F1</h2>
-    <ul>
-      <li>🏆 Constructores F1: Alpine (T65)</li>
-      <!-- Aquí puedes seguir añadiendo trofeos -->
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 Alpine Academy - Intercontinental Series</p>
-  </footer>
-
+<script>
+const toggleBtn = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+toggleBtn.addEventListener('click', () => menu.classList.toggle('show'));
+</script>
 </body>
 </html>
