@@ -1,178 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Historia Completa - Alpine Academy Intercontinental Series</title>
   <style>
-    body {
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
+      background: linear-gradient(135deg,#001f3f,#0074D9);
+      color:#fff;
     }
-    header {
-      background: #001f3f;
-      color: white;
-      padding: 1rem;
-      text-align: center;
+    /* Header + Nav */
+    header{
+      background: rgba(0,0,0,0.7);
+      padding:10px 20px;
+      position: sticky;
+      top:0; z-index:1000;
+      display:flex; align-items:center; justify-content:space-between;
     }
-    nav {
-      background: #00509e;
-      padding: 0.5rem;
-      text-align: center;
+    header h1{ margin:0; font-size:1.1rem; }
+    nav ul{ list-style:none; display:flex; gap:16px; margin:0; padding:0; }
+    nav a{ color:#fff; text-decoration:none; font-weight:bold; }
+    nav a:hover{ color:#FFD700; }
+    /* Hamburguesa */
+    .menu-toggle{ display:none; flex-direction:column; cursor:pointer; }
+    .menu-toggle div{ width:25px; height:3px; background:#fff; margin:4px 0; }
+    @media (max-width:768px){
+      nav ul{ display:none; flex-direction:column; position:absolute; right:20px; top:58px; background:rgba(0,0,0,0.9); padding:12px; border-radius:10px; width:calc(100% - 40px); max-width:320px; }
+      nav ul.active{ display:flex; }
+      .menu-toggle{ display:flex; }
     }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
+    main{ max-width:1000px; margin: 20px auto 60px; padding: 0 16px; }
+    h2{ color:#FFD700; margin-top:10px; }
+    .historia-box{
+      background: rgba(0,0,0,0.55);
+      border-radius:12px;
+      padding:20px;
+      line-height:1.55;
+      /* Esto muestra el texto EXACTO que me pasaste: */
+      white-space: pre-wrap; 
     }
-    nav a:hover {
-      text-decoration: underline;
+    footer{
+      background: rgba(0,0,0,0.85);
+      text-align:center;
+      padding:18px;
+      font-size:0.95rem;
     }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background: white;
-    }
-    h1, h2, h3 {
-      color: #003366;
-    }
-    blockquote {
-      border-left: 4px solid #00509e;
-      padding-left: 1rem;
-      font-style: italic;
-      background: #f0f8ff;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #001f3f;
-      color: white;
-      margin-top: 2rem;
-    }
+    footer a{ color:#4cc9f0; text-decoration:none; }
   </style>
 </head>
 <body>
   <header>
     <h1>Alpine Academy Intercontinental Series</h1>
-    <p>Historia Completa</p>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div><div></div><div></div>
+    </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="f1.html">F1</a></li>
+        <li><a href="f2.html">F2</a></li>
+        <li><a href="f3.html">F3</a></li>
+        <li><a href="f4.html">F4</a></li>
+        <li><a href="f5.html">F5</a></li>
+        <li><a href="historia.html">Historia</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="f1.html">F1</a>
-    <a href="f2.html">F2</a>
-    <a href="f3.html">F3</a>
-    <a href="f4.html">F4</a>
-    <a href="historia.html">Historia</a>
-  </nav>
-
   <main>
-    <h2>Alpine Academy: Forjando Campeones, No Solo Buscándolos</h2>
+    <h2>Historia Completa</h2>
 
-    <h3>Los Primeros Pasos (T47–T50)</h3>
-    <p>
-      En la Temporada 47 de la Intercontinental Series, nació una visión diferente en el mundo del automovilismo virtual. 
-      Mientras otros equipos cazaban talento establecido, Alpine Academy emergió con una filosofía revolucionaria: 
-      <em>"No buscamos a los mejores, los hacemos mejores"</em>. 
-    </p>
-    <p>
-      Como CEO fundador de Alpine, también tomé las riendas de Mitsubishi en F3, estableciendo desde el inicio una red de desarrollo que abarcaría múltiples categorías. 
-      Alpine se concibió como un espacio de crecimiento y aprendizaje, no como un destino final. 
-    </p>
+    <div class="historia-box">
+# Alpine Academy: Forjando Campeones, No Solo Buscándolos
 
-    <h3>El Nacimiento Oficial (T50)</h3>
-    <p>
-      La Temporada 50 marcó un hito histórico: Alpine nació oficialmente. Lo que comenzó como un proyecto paralelo en Mitsubishi 
-      se convirtió en una academia con nombre y apellido, con una identidad propia y una misión clara: construir un legado en vez de solo competir.
-    </p>
+## Los Primeros Pasos (T47-T50)
 
-    <h3>Años de Construcción y Mentoría (T51–T60)</h3>
-    <p>
-      Durante esta década crucial, Alpine Academy se estableció como algo único en el paddock. 
-      No solo competíamos: enseñábamos. Pilotos y CEOs jóvenes encontraban en Alpine un lugar para aprender a gestionar, crecer y soñar con más.
-    </p>
-    <p>
-      Bajo mi liderazgo como Victor Escalante, no solo formamos escuderías satélite como Citroën Alpine en F2 y Alpine Mitsubishi en F3, 
-      sino que también impulsamos carreras de CEOs que luego destacaron en categorías mayores.
-    </p>
+En la Temporada 47 de la Intercontinental Series, nació una visión diferente en el mundo del automovilismo virtual. Mientras otros equipos cazaban talento establecido, Alpine Academy emergió con una filosofía revolucionaria: *"No buscamos a los mejores, los hacemos mejores"*.
 
-    <h3>La Consolidación del Legado (T58–T63)</h3>
-    <ul>
-      <li><strong>T58:</strong> Alpine Academy logra el campeonato de constructores en F4, confirmando que nuestra filosofía daba frutos.</li>
-      <li><strong>T61:</strong> Dominamos la Silver League F4 mientras Diego Redondo y Arturo Yerena brillan en pista.</li>
-      <li><strong>T62:</strong> Expandimos con Citroën Alpine en F2 y Alpine Juniors en F5, consolidando una estructura piramidal de desarrollo.</li>
-    </ul>
+Como CEO fundador de Alpine, también tomé las riendas de Mitsubishi en F3, estableciendo desde el inicio una red de desarrollo que abarcaría múltiples categorías. La misión era clara: convertirnos en más que un equipo de carreras, ser una verdadera academia que enseñara, guiara y desarrollara el talento emergente de IGP Manager.
 
-    <h3>Más Que Un Equipo: Un Movimiento</h3>
-    <p>
-      Alpine Academy no fue nunca un simple equipo, sino un movimiento que redefinió el automovilismo en la liga Intercontinental Series.
-    </p>
-    <h4>Nuestros Pilares</h4>
-    <ul>
-      <li><em>Educación Continua:</em> Cada piloto que pasa por nuestras filas aprende no solo a ganar, sino a enseñar.</li>
-      <li><em>Mentoría Activa:</em> Brindamos orientación constante a nuevos CEOs y equipos emergentes.</li>
-      <li><em>Desarrollo Sostenible:</em> Preferimos formar talento a largo plazo que perseguir éxitos fugaces.</li>
-      <li><em>Promoción Interna:</em> Como el ascenso de Leandro Fernández, que pasó de campeón F5 a CEO.</li>
-      <li><em>Comunidad:</em> Fomentamos una red de apoyo que va más allá de la competencia.</li>
-    </ul>
+## El Nacimiento Oficial (T50)
 
-    <h3>El Ascenso a la Gloria (T65–T69)</h3>
-    <p>
-      <strong>T65:</strong> Alpine logra el campeonato de constructores en Fórmula 1, un sueño que parecía imposible en nuestros inicios.  
-      <strong>T66:</strong> Cristian Fernández arrasa en F3 mientras Alpine se lleva el título en F4.  
-      <strong>T67:</strong> Consagramos nuestro dominio con el campeonato en F2, demostrando que toda la pirámide funcionaba en armonía.  
-      <strong>T69:</strong> Leandro Fernández logra su primera victoria en F1, y la llegada de Charles Evans, campeón mundial, eleva el nivel de la academia a un plano global.
-    </p>
+La Temporada 50 marcó un hito histórico: *Alpine nació oficialmente*. Ya no éramos solo una idea o un proyecto experimental, sino una realidad consolidada en la Intercontinental Series. Curiosamente, fue también en esta temporada que Omar de León conquistó la Copa Libertadores, mostrando que el talento que formábamos podía brillar en cualquier escenario.
 
-    <h3>El Presente y El Futuro (T71 en adelante)</h3>
-    <p>
-      Hoy, en la T71, Alpine Academy ha alcanzado una posición sin precedentes en la Intercontinental Series. 
-      Somos el único equipo con presencia activa en todas las categorías (F1, F2, F3, F4, F5 y K6), 
-      una red completa de formación y excelencia.
-    </p>
-    <p>
-      Nuestro legado está asegurado: Alpine no depende de nombres individuales, sino de una filosofía compartida que se transmite de generación en generación. 
-      Con Leandro Fernández y Angelo Lemus como herederos del proyecto, el futuro de Alpine Academy está garantizado.
-    </p>
+## Años de Construcción y Mentoría (T51-T60)
 
-    <blockquote>
-      "No buscamos a los mejores, los hacemos mejores"  
-      – Victor Escalante, Team Principal de Alpine Academy (desde T47 hasta hoy)
-    </blockquote>
+Durante esta década crucial, Alpine Academy se estableció como algo único en el paddock. Mientras otros equipos medían su éxito solo en trofeos, nosotros lo medíamos en vidas cambiadas y carreras transformadas. 
 
-    <!-- 🔵 ACTUALIDAD -->
-    <h2>Actualidad</h2>
-    <p>
-      En la temporada actual, Alpine Academy se mantiene como una de las estructuras más completas y sólidas dentro de la 
-      Intercontinental Series. Con presencia activa en todas las divisiones, el equipo se ha convertido en un referente 
-      tanto deportivo como formativo.
-    </p>
-    <ul>
-      <li><strong>F1:</strong> Consolidado en la máxima categoría, con pilotos experimentados capaces de luchar en la élite.</li>
-      <li><strong>F2:</strong> Citroën Alpine mantiene la competitividad, preparando pilotos listos para dar el salto a F1.</li>
-      <li><strong>F3:</strong> Un semillero de talento, con jóvenes promesas que buscan abrirse paso.</li>
-      <li><strong>F4 y F5:</strong> La base de la academia, donde nuevos CEOs y pilotos reciben su primera oportunidad.</li>
-      <li><strong>K6:</strong> El punto de entrada más joven y fresco, orientado a la formación inicial.</li>
-    </ul>
-    <p>
-      Hoy Alpine Academy es más que un equipo: es una <em>escuela integral</em> que asegura el relevo generacional 
-      en el automovilismo virtual. Gracias a la visión de su fundador y la labor de sus herederos, 
-      la academia sigue forjando campeones dentro y fuera de la pista.
-    </p>
+Nuestra filosofía de mentoría comenzó a dar frutos tangibles. No solo desarrollábamos pilotos dentro de nuestras filas, sino que *directa e indirectamente participamos en la creación de nuevas escuderías. Un ejemplo perfecto fue cuando brindamos apoyo y orientación para el nacimiento de **Acura Honda*, fundada por Angelo Lemus y Sebastián Ramírez. Estos nuevos CEOs habían aprendido no solo las técnicas de manejo de equipo, sino también los valores de mentoría que caracterizaban a Alpine Academy.
+
+## La Consolidación del Legado (T58-T63)
+
+Los frutos de años de trabajo comenzaron a manifestarse de manera espectacular:
+
+- *T58*: Alpine Academy logra el campeonato de constructores en F4
+- *T61*: Dominamos la Silver League F4 mientras Diego Redondo y Arturo Yerena brillan en sus respectivas competencias
+- *T62*: Expandimos nuestro alcance con Citroën Alpine en F2 y Alpine Juniors en la Bronze League F5
+
+## Más Que Un Equipo: Un Movimiento
+
+Alpine Academy no es solo una escudería, es un *movimiento educativo* dentro de IGP Manager. Nuestro impacto trasciende los resultados en pista:
+
+### Nuestros Pilares:
+1. *Educación Continua*: Cada piloto que pasa por nuestras filas aprende no solo a ganar, sino a enseñar
+2. *Mentoría Activa*: Brindamos orientación constante a nuevos CEOs y equipos emergentes
+3. *Desarrollo Sostenible*: Preferimos formar talento a largo plazo que buscar victorias inmediatas
+4. *Promoción Interna*: Como demuestra el ascenso de Leandro Fernández de campeón F5 a CEO
+5. *Comunidad*: Fomentamos una red de apoyo que va más allá de la competencia
+
+### Nuestro Legado Viviente:
+- *Nuevas Escuderías*: Como Acura Honda, nacidas bajo nuestra orientación
+- *Campeones Formados*: Pilotos que llegaron sin experiencia y se convirtieron en ganadores
+- *Líderes Desarrollados*: Como Leandro Fernández, de campeón F5 a CEO y piloto ganador en F1
+- *Talentos Reintegrados*: Como Angelo Lemus, quien regresó como estratega y ascendió a F1
+- *CEOs Mentorizados*: Líderes que ahora replican nuestra filosofía en sus propios equipos
+- *Cultura de Enseñanza*: Una mentalidad que ha permeado toda la Intercontinental Series
+
+## El Ascenso a la Gloria (T65-T69)
+
+Los últimos años han marcado la *era dorada* de Alpine Academy, donde toda la inversión en formación y mentoría finalmente alcanzó las máximas categorías del automovilismo:
+
+### T65: La Conquista de F1 y Incorporaciones Especiales
+*Alpine logra el campeonato de constructores en Fórmula 1*, el pináculo del automovilismo mundial. Este triunfo no es solo una victoria deportiva, sino la validación definitiva de nuestra filosofía: los pilotos y técnicos formados en nuestras categorías inferiores finalmente conquistaron la cima.
+
+Pero T65 también marcó otros dos hitos fundamentales para Alpine Academy:
+
+*Leandro Fernández se une como CEO al equipo, viniendo desde abajo y reafirmando completamente la filosofía del equipo. Recordemos que Leandro había sido **campeón WDC F5 en T63*, uno de los talentos que desarrollamos en nuestras categorías de formación. Su ascensión de piloto campeón en F5 a CEO demuestra que Alpine Academy es verdaderamente un lugar donde el talento puede crecer sin límites, desde la pista hasta la sala de juntas.
+
+Paralelamente, *Angelo Lemus llega como ayudante y estratega del equipo. Angelo, quien anteriormente había cofundado Acura Honda con nuestro apoyo y orientación, regresa al ecosistema Alpine pero esta vez desde una perspectiva técnica y estratégica. Su incorporación al equipo de F2 marca el inicio de una nueva fase en su carrera, donde **eventualmente logra su ascenso a F1 y suma sus primeros puntos en la máxima categoría*. Angelo representa otro ejemplo perfecto de cómo Alpine Academy sirve como un verdadero hogar para el talento en desarrollo, donde las personas pueden regresar y encontrar nuevas oportunidades de crecimiento.
+
+### T66: El Año Perfecto
+Esta temporada será recordada como legendaria en los anales de Alpine Academy:
+- *Cristian Fernández* domina completamente la F3, ganando tanto el *WDC* como la *Golden League*
+- *Alpine conquista el campeonato de constructores en F4*
+- Tres categorías, múltiples campeonatos: la demostración perfecta de que nuestro sistema de desarrollo funciona en todos los niveles
+
+### T67: Consolidando el Dominio
+*Alpine se corona campeón de constructores en F2, completando una presencia dominante que abarca desde F1 hasta las categorías de desarrollo. Ya no somos solo una academia, somos un **imperio deportivo* basado en la educación y la excelencia.
+
+### T69-T71: La Nueva Era
+En una demostración perfecta de que nuestro desarrollo interno funciona, *Leandro Fernández logra su primera victoria en F1 en su temporada debut en la máxima categoría*. Desde campeón F5 en T63, a CEO en T65, y ahora piloto victorioso en F1 en T69, Leandro encarna todo lo que representa Alpine Academy: crecimiento continuo, versatilidad y excelencia en cada rol que asume.
+
+Esta victoria no es solo personal para Leandro, sino un triunfo del sistema Alpine Academy que demuestra que *podemos formar líderes que también pueden ser campeones* cuando se ponen el casco.
+
+*T71* marca el inicio de una nueva era con la llegada de *Charles Evans, campeón mundial de F1, quien se une al proyecto Alpine Academy. Esta incorporación representa un hito único en nuestra historia: por primera vez, no solo estamos formando campeones, sino que **un campeón mundial establecido elige formar parte de nuestro ecosistema*. La llegada de Charles valida definitivamente que Alpine Academy se ha convertido en el destino preferido tanto para el talento emergente como para las leyendas establecidas del automovilismo.
+
+## El Presente y El Futuro (T71 en adelante)
+
+Hoy, en la *T71, Alpine Academy ha alcanzado una posición sin precedentes en la Intercontinental Series. La incorporación de **Charles Evans, campeón mundial de F1, marca un momento histórico: hemos evolucionado de ser un equipo que **forma* campeones a ser un equipo que *atrae* campeones ya establecidos.
+
+Esta nueva dinámica no contradice nuestra filosofía original, sino que la *eleva a un nuevo nivel*. Con Charles Evans en nuestras filas, no solo continuamos desarrollando talento emergente, sino que ahora también podemos ofrecer mentoría directa de un campeón mundial a nuestros pilotos en formación. Es la síntesis perfecta de experiencia consolidada y potencial en desarrollo.
+
+Alpine Academy ha demostrado que su visión era correcta desde el inicio. *Desde la humilde T47 hasta la prestigiosa T71, hemos construido algo más grande que cualquier equipo individual: hemos creado un **ecosistema de excelencia* que ahora atrae tanto a leyendas como a futuros campeones.
+
+Con campeonatos de constructores en *F1, F2 y F4, campeones como **Cristian Fernández* dominando la F3, *Leandro Fernández* ganando en F1 como CEO-piloto, y *Angelo Lemus* sumando puntos en la máxima categoría tras su reintegración, Alpine Academy sigue fiel a sus raíces: nunca perdemos de vista nuestra misión principal de *hacer mejores a los demás, pero ahora lo hacemos desde la posición de **líderes indiscutibles* del deporte.
+
+Cada temporada que pasa, nuestra red de influencia crece. No medimos nuestro éxito solo en campeonatos ganados, sino en cuántas carreras hemos ayudado a construir, cuántos sueños hemos ayudado a cumplir, y cuántos nuevos mentores hemos formado.
+
+*En Alpine Academy, cada piloto que pasa por nuestras puertas no solo se convierte en un mejor corredor, sino en un mejor maestro. Porque al final del día, el verdadero campeonato no se gana en la pista, sino en los corazones y mentes de aquellos a quienes inspiramos a ser mejores.*
+
+---
+
+"No buscamos a los mejores, los hacemos mejores" - Victor Escalante Team Principal de Alpine Academy, desde T47 hasta hoy
+    </div>
   </main>
 
   <footer>
-    <p>Basado en la liga Intercontinental Series del videojuego iGP Manager</p>
-    <p>Herederos: Leandro Fernández y Angelo Lemus</p>
+    Alpine Academy Intercontinental Series – Basado en la liga Intercontinental Series del videojuego iGP Manager.
+    <br/>CEOs: Victor Escalante, Leandro Fernández y Angelo Lemus.
   </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', ()=> menu.classList.toggle('active'));
+  </script>
 </body>
 </html>
