@@ -6,161 +6,141 @@
   <title>Alpine Academy Intercontinental Series</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #001f3f, #0074D9);
+      color: white;
     }
+
     header {
-      background: #001f3f;
-      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
       padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
+    header h1 {
+      font-size: 1.2em;
+      margin: 0;
     }
+
+    /* menú pc */
     nav ul {
       list-style: none;
       display: flex;
+      gap: 15px;
       margin: 0;
       padding: 0;
     }
-    nav ul li {
-      margin-left: 20px;
-    }
+
     nav ul li a {
-      color: white;
       text-decoration: none;
+      color: white;
       font-weight: bold;
     }
+
     nav ul li a:hover {
-      text-decoration: underline;
+      color: #FFD700;
     }
+
+    /* menú móvil */
     .menu-toggle {
       display: none;
-      font-size: 24px;
+      flex-direction: column;
       cursor: pointer;
     }
-    main {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
     }
-    section {
-      margin-bottom: 40px;
-    }
-    h1, h2, h3 {
-      color: #001f3f;
-    }
-    footer {
-      background: #001f3f;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    footer a {
-      color: #ffcc00;
-      text-decoration: none;
-    }
-    /* Responsive */
+
     @media (max-width: 768px) {
       nav ul {
         display: none;
         flex-direction: column;
-        background: #001f3f;
+        background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 60px;
-        right: 0;
-        width: 200px;
+        right: 20px;
         padding: 10px;
+        border-radius: 8px;
       }
-      nav ul.showing {
+      nav ul.active {
         display: flex;
       }
       .menu-toggle {
-        display: block;
+        display: flex;
       }
-      nav ul li {
-        margin: 10px 0;
-      }
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    main h2 {
+      color: #FFD700;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 style="margin:0;">Alpine Academy</h1>
-      <span class="menu-toggle">☰</span>
-      <nav>
-        <ul id="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="historia.html">Historia</a></li>
-          <li><a href="f1.html">F1</a></li>
-          <li><a href="f2.html">F2</a></li>
-          <li><a href="f3.html">F3</a></li>
-          <li><a href="f4.html">F4</a></li>
-          <li><a href="f5.html">F5</a></li>
-          <li><a href="trofeos.html">Trofeos</a></li>
-        </ul>
-      </nav>
+    <h1>Alpine Academy Intercontinental Series</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="f1.html">F1</a></li>
+        <li><a href="f2.html">F2</a></li>
+        <li><a href="f3.html">F3</a></li>
+        <li><a href="f4.html">F4</a></li>
+        <li><a href="f5.html">F5</a></li>
+        <li><a href="historia.html">Historia</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Historia Resumida</h2>
-      <p>Alpine Academy Intercontinental Series nació en la Temporada 47 con una visión diferente: 
-      <em>"No buscamos a los mejores, los hacemos mejores"</em>. Desde entonces, hemos formado pilotos, 
-      equipos y CEOs que hoy compiten en todas las categorías de IGP Manager.</p>
-    </section>
-
-    <section>
-      <h2>Equipos Titulares</h2>
-      <ul>
-        <li><strong>F1:</strong> Alpine Academy</li>
-        <li><strong>F2:</strong> Citroën Alpine</li>
-        <li><strong>F3:</strong> Alpine Junior</li>
-        <li><strong>F4:</strong> Alpine Development</li>
-        <li><strong>F5:</strong> Alpine Future Stars</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Pilotos Destacados</h2>
-      <ul>
-        <li>Leandro Fernández – Campeón F5, CEO y piloto ganador en F1</li>
-        <li>Angelo Lemus – Estratega y piloto con puntos en F1</li>
-        <li>Cristian Fernández – Campeón F3 y líder de desarrollo</li>
-        <li>Charles Evans – Campeón Mundial de F1, hoy en Alpine Academy</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Trofeos</h2>
-      <p>Consulta la lista completa de títulos en la <a href="trofeos.html">página de trofeos</a>.</p>
-    </section>
+    <h2>Bienvenidos a Alpine Academy</h2>
+    <p>
+      Proyecto basado en la liga Intercontinental Series del videojuego iGP Manager.  
+      Alpine Academy Intercontinental Series no solo busca campeones, los forma.  
+    </p>
+    <p>
+      Explora nuestras categorías, historia y logros a través del menú superior.
+    </p>
   </main>
 
   <footer>
-    <p>Alpine Academy Intercontinental Series – Basado en la liga Intercontinental Series del videojuego iGP Manager</p>
-    <p>Herederos: Leandro Fernández y Angelo Lemus</p>
-    <p>Síguenos en redes: 
-      <a href="#">Twitter</a> | 
-      <a href="#">Instagram</a>
-    </p>
+    Basado en la liga Intercontinental Series del videojuego iGP Manager.  
+    <br> CEOs: Victor Escalante, Leandro Fernández y Angelo Lemus
   </footer>
 
   <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.getElementById('menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('showing');
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
     });
   </script>
 </body>
