@@ -3,108 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpine Citroën - F2</title>
-  <link rel="stylesheet" href="style.css">
+  <title>F2 - Alpine Academy Intercontinental Series</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #b0b0b0, #ffffff, #e3a1d5, #7db3e7);
-      color: #222;
+      background: #f9f9f9;
+      color: #333;
     }
+
+    /* ----- HEADER ----- */
     header {
-      background: #444;
-      color: white;
-      padding: 1rem;
-      text-align: center;
+      background: #3a3a3a;
+      color: #fff;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
     }
     h1 {
-      margin: 0.5rem 0;
+      margin: 0;
+      font-size: 20px;
     }
-    .pilotos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
+
+    /* ----- NAV ----- */
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
     }
-    .piloto {
-      background: rgba(255,255,255,0.9);
-      border-radius: 12px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    nav ul li {
+      margin-left: 20px;
     }
-    .piloto img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 0.5rem;
-      border: 3px solid #999;
-    }
-    .bandera {
-      font-size: 1.5rem;
-      margin-left: 8px;
-    }
-    nav {
-      text-align: center;
-      padding: 1rem;
-    }
-    nav a {
+    nav ul li a {
+      color: white;
       text-decoration: none;
-      color: #222;
       font-weight: bold;
-      margin: 0 10px;
     }
-    nav a:hover {
-      color: #c0392b;
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ----- MENU HAMBURGUESA ----- */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* ----- MAIN ----- */
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #3a3a3a;
+    }
+
+    /* ----- FOOTER ----- */
+    footer {
+      background: #3a3a3a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: #ff69b4;
+      text-decoration: none;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #3a3a3a;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+      nav ul.showing {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🏎️ Alpine Citroën - F2</h1>
-    <p>Segunda categoría del equipo Alpine en la Intercontinental Series</p>
+    <div class="container">
+      <h1>Alpine Academy - F2</h1>
+      <span class="menu-toggle">☰</span>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="f1.html">F1</a></li>
+          <li><a href="f2.html">F2</a></li>
+          <li><a href="f3.html">F3</a></li>
+          <li><a href="f4.html">F4</a></li>
+          <li><a href="f5.html">F5</a></li>
+          <li><a href="trofeos.html">Trofeos</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section>
-      <h2 style="text-align:center;">Pilotos Titulares</h2>
-      <div class="pilotos">
-        <div class="piloto">
-          <img src="img/angelo_lemus.jpg" alt="Angelo Lemus">
-          <h3>Angelo Lemus 🇲🇽</h3>
-        </div>
-        <div class="piloto">
-          <img src="img/renato_gaspar.jpg" alt="Renato Gaspar">
-          <h3>Renato Gaspar 🇧🇷</h3>
-        </div>
-        <div class="piloto">
-          <img src="img/raul_de_leon.jpg" alt="Raúl de León">
-          <h3>Raúl de León 🇲🇽</h3>
-        </div>
-        <div class="piloto">
-          <img src="img/victor_yanacon.jpg" alt="Victor Yanacon">
-          <h3>Victor Yanacon 🇦🇷</h3>
-        </div>
-      </div>
+      <h2>Historia de la F2</h2>
+      <p>La <strong>Alpine Academy F2</strong> es el semillero estratégico de talentos. 
+      Es una de las categorías clave en el desarrollo de los pilotos que más tarde ascienden a la élite de la F1.  
+      Con un estilo propio marcado por el color gris con detalles en rosa y azul, la F2 ha sido sinónimo de constancia y trabajo en equipo.</p>
     </section>
 
-    <section style="text-align:center; padding:2rem;">
-      <h2>🏆 Trofeos de Alpine F2</h2>
-      <p><a href="trofeos-f2.html">Ver lista completa de trofeos F2 →</a></p>
+    <section>
+      <h2>Pilotos Titulares</h2>
+      <ul>
+        <li>Victor Escalante – México</li>
+        <li>Ivan – Argentina</li>
+        <li>Mauro – Argentina</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Trofeos de F2</h2>
+      <p>Puedes consultar los títulos obtenidos por esta categoría en la 
+        <a href="trofeos-f2.html">página de trofeos de F2</a>.
+      </p>
     </section>
   </main>
 
-  <nav>
-    <a href="index.html">🏠 Inicio</a>
-    <a href="f1.html">F1</a>
-    <a href="f2.html">F2</a>
-    <a href="f3.html">F3</a>
-    <a href="f4.html">F4</a>
-    <a href="f5.html">F5</a>
-    <a href="k6.html">K6</a>
-  </nav>
+  <footer>
+    <p>Alpine Academy Intercontinental Series – Basado en la liga Intercontinental Series del videojuego iGP Manager</p>
+    <p>Herederos: Leandro Fernández y Angelo Lemus</p>
+    <p>Síguenos en redes: 
+      <a href="#">Twitter</a> | 
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('showing');
+    });
+  </script>
 </body>
 </html>
