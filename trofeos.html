@@ -1,103 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trofeos - Alpine Intercontinental</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trofeos Alpine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">🏎️ Alpine</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="trofeos.html">Trofeos</a></li>
-      </ul>
-    </nav>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header -->
+  <header class="bg-blue-700 p-4 text-center">
+    <h1 class="text-3xl font-bold text-pink-400">🏆 Trofeos del Equipo Alpine</h1>
+    <p class="mt-2 text-blue-200">Todos los títulos y campeonatos logrados en la Intercontinental Series</p>
   </header>
 
-  <section class="hero">
-    <h1>🏆 Trofeos del Equipo Alpine</h1>
-    <p>Aquí encontrarás todos los títulos y campeonatos logrados en la <b>Intercontinental Series</b>.</p>
-  </section>
+  <!-- Contenedor -->
+  <main class="max-w-6xl mx-auto p-6 space-y-12">
 
-  <main class="container">
-    <h2>Lista Completa de Ganadores</h2>
-    <div class="trofeos-tabla">
-      <table>
-        <thead>
-          <tr>
-            <th>Temporada</th>
-            <th>Competición</th>
-            <th>Ganador</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>T47</td><td>Copa Pistón F2</td><td>Carlos Vázquez</td></tr>
-          <tr><td>T47</td><td>Conference League</td><td>Citroën</td></tr>
-          <tr><td>T49</td><td>Copa Pistón F2</td><td>Dan Viturro</td></tr>
-          <tr><td>T49</td><td>Future League F3</td><td>Mitsubishi (Constructores)</td></tr>
-          <tr><td>T49</td><td>WDC F3</td><td>Valentín Ramos</td></tr>
-          <tr><td>T49</td><td>F4 Primer Campeón</td><td>Christian Horny</td></tr>
-          <tr><td>T49</td><td>Constructores F4</td><td>Citroën Academy</td></tr>
-          <tr><td>T50</td><td>Copa Libertadores</td><td>Omar de León</td></tr>
-          <tr><td>T51</td><td>Real Cup F4</td><td>Antonio Villalba</td></tr>
-          <tr><td>T51</td><td>WDC F4</td><td>Antonio Villalba</td></tr>
-          <tr><td>T51</td><td>WDC F1</td><td>Omar de León</td></tr>
-          <tr><td>T52</td><td>WDC F3</td><td>Diolys Pedroza</td></tr>
-          <tr><td>T52</td><td>Constructores F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T54</td><td>Golden League F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T54</td><td>Constructores F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T54</td><td>WDC F3</td><td>Antonio Villalba</td></tr>
-          <tr><td>T55</td><td>Golden League F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T55</td><td>Rookie Cup F3</td><td>Jesse Valim</td></tr>
-          <tr><td>T55</td><td>Constructores F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T55</td><td>WDC F5</td><td>Ignacio Chirioni</td></tr>
-          <tr><td>T55</td><td>WDC F3</td><td>Jesse Valim</td></tr>
-          <tr><td>T56</td><td>Conference League F2</td><td>Cadillac Andretti</td></tr>
-          <tr><td>T56</td><td>Copa Pistón F2</td><td>Diolys Pedroza</td></tr>
-          <tr><td>T56</td><td>Constructores F2</td><td>Cadillac</td></tr>
-          <tr><td>T56</td><td>WDC F2</td><td>Diolys Pedroza</td></tr>
-          <tr><td>T56</td><td>Copa Promises F5</td><td>Sebas Ramírez</td></tr>
-          <tr><td>T57</td><td>Conference League F2</td><td>Andretti Cadillac</td></tr>
-          <tr><td>T57</td><td>Golden League F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T57</td><td>Copa Pistón F2</td><td>Luis Rentería</td></tr>
-          <tr><td>T57</td><td>Rookie Cup F3</td><td>Gastón Juno Ades</td></tr>
-          <tr><td>T57</td><td>Constructores F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T57</td><td>WDC F3</td><td>Gastón Juno Ades</td></tr>
-          <tr><td>T58</td><td>Conference League F2</td><td>Andretti</td></tr>
-          <tr><td>T58</td><td>Golden League F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T58</td><td>Constructores F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T58</td><td>Constructores F4</td><td>Alpine Academy</td></tr>
-          <tr><td>T59</td><td>Golden League F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T59</td><td>Bronze League F5</td><td>Andretti</td></tr>
-          <tr><td>T59</td><td>Constructores F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T59</td><td>Constructores F5</td><td>Andretti</td></tr>
-          <tr><td>T59</td><td>WDC F4</td><td>Marco Caracciolo</td></tr>
-          <tr><td>T59</td><td>WDC F3</td><td>Ignacio Chirioni</td></tr>
-          <tr><td>T60</td><td>Golden League F3</td><td>Mitsubishi</td></tr>
-          <tr><td>T61</td><td>Silver League F4</td><td>Alpine Academy</td></tr>
-          <tr><td>T61</td><td>Copa Promises F4</td><td>Diego Redondo</td></tr>
-          <tr><td>T61</td><td>WDC F4</td><td>Arturo Yerena</td></tr>
-          <tr><td>T62</td><td>Conference League F2</td><td>Citroën Alpine</td></tr>
-          <tr><td>T62</td><td>Bronze League F5</td><td>Alpine Juniors</td></tr>
-          <tr><td>T62</td><td>Copa Promises F4</td><td>Iván Leiva</td></tr>
-          <tr><td>T63</td><td>Real Cup F4</td><td>Lucas Mazacotte</td></tr>
-          <tr><td>T63</td><td>WDC F5</td><td>Leandro Fernández</td></tr>
-          <tr><td>T65</td><td>Constructores F1</td><td>Alpine</td></tr>
-          <tr><td>T66</td><td>WDC F3</td><td>Cristian Fernández</td></tr>
-          <tr><td>T66</td><td>Golden League F3</td><td>Cristian Fernández</td></tr>
-          <tr><td>T66</td><td>Constructores F4</td><td>Alpine</td></tr>
-          <tr><td>T67</td><td>Constructores F2</td><td>Alpine</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- F1 -->
+    <section>
+      <h2 class="text-2xl font-bold text-pink-300 mb-4">F1</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border border-blue-600">
+          <thead class="bg-blue-700">
+            <tr>
+              <th class="p-3">Temporada</th>
+              <th class="p-3">Competición</th>
+              <th class="p-3">Ganador</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-600">
+            <tr><td class="p-3">T51</td><td class="p-3">WDC F1</td><td class="p-3">Omar de León</td></tr>
+            <tr><td class="p-3">T65</td><td class="p-3">Constructores F1</td><td class="p-3">Alpine</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- F2 -->
+    <section>
+      <h2 class="text-2xl font-bold text-pink-300 mb-4">F2</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border border-blue-600">
+          <thead class="bg-blue-700">
+            <tr>
+              <th class="p-3">Temporada</th>
+              <th class="p-3">Competición</th>
+              <th class="p-3">Ganador</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-600">
+            <tr><td class="p-3">T47</td><td class="p-3">Copa Pistón F2</td><td class="p-3">Carlos Vázquez</td></tr>
+            <tr><td class="p-3">T49</td><td class="p-3">Copa Pistón F2</td><td class="p-3">Dan Viturro</td></tr>
+            <tr><td class="p-3">T56</td><td class="p-3">Conference League F2</td><td class="p-3">Cadillac Andretti</td></tr>
+            <tr><td class="p-3">T56</td><td class="p-3">Copa Pistón F2</td><td class="p-3">Diolys Pedroza</td></tr>
+            <tr><td class="p-3">T56</td><td class="p-3">Constructores F2</td><td class="p-3">Cadillac</td></tr>
+            <tr><td class="p-3">T56</td><td class="p-3">WDC F2</td><td class="p-3">Diolys Pedroza</td></tr>
+            <tr><td class="p-3">T57</td><td class="p-3">Conference League F2</td><td class="p-3">Andretti Cadillac</td></tr>
+            <tr><td class="p-3">T57</td><td class="p-3">Copa Pistón F2</td><td class="p-3">Luis Rentería</td></tr>
+            <tr><td class="p-3">T58</td><td class="p-3">Conference League F2</td><td class="p-3">Andretti</td></tr>
+            <tr><td class="p-3">T62</td><td class="p-3">Conference League F2</td><td class="p-3">Citroën Alpine</td></tr>
+            <tr><td class="p-3">T67</td><td class="p-3">Constructores F2</td><td class="p-3">Alpine</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- F3 -->
+    <section>
+      <h2 class="text-2xl font-bold text-pink-300 mb-4">F3</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border border-blue-600">
+          <thead class="bg-blue-700">
+            <tr>
+              <th class="p-3">Temporada</th>
+              <th class="p-3">Competición</th>
+              <th class="p-3">Ganador</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-600">
+            <tr><td class="p-3">T49</td><td class="p-3">Future League F3</td><td class="p-3">Mitsubishi</td></tr>
+            <tr><td class="p-3">T49</td><td class="p-3">WDC F3</td><td class="p-3">Valentín Ramos</td></tr>
+            <tr><td class="p-3">T52</td><td class="p-3">WDC F3</td><td class="p-3">Diolys Pedroza</td></tr>
+            <tr><td class="p-3">T52</td><td class="p-3">Constructores F3</td><td class="p-3">Mitsubishi</td></tr>
+            <tr><td class="p-3">T54</td><td class="p-3">Golden League F3</td><td class="p-3">Mitsubishi</td></tr>
+            <tr><td class="p-3">T54</td><td class="p-3">WDC F3</td><td class="p-3">Antonio Villalba</td></tr>
+            <tr><td class="p-3">T55</td><td class="p-3">Golden League F3</td><td class="p-3">Mitsubishi</td></tr>
+            <tr><td class="p-3">T55</td><td class="p-3">Rookie Cup F3</td><td class="p-3">Jesse Valim</td></tr>
+            <tr><td class="p-3">T55</td><td class="p-3">WDC F3</td><td class="p-3">Jesse Valim</td></tr>
+            <tr><td class="p-3">T57</td><td class="p-3">Golden League F3</td><td class="p-3">Mitsubishi</td></tr>
+            <tr><td class="p-3">T57</td><td class="p-3">Rookie Cup F3</td><td class="p-3">Gastón Juno Ades</td></tr>
+            <tr><td class="p-3">T57</td><td class="p-3">WDC F3</td><td class="p-3">Gastón Juno Ades</td></tr>
+            <tr><td class="p-3">T58</td><td class="p-3">Golden League F3</td><td class="p-3">Mitsubishi</td></tr>
+            <tr><td class="p-3">T59</td><td class="p-3">Golden League F3</td><td class="p-3">Mitsubishi</td></tr>
+            <tr><td class="p-3">T59</td><td class="p-3">WDC F3</td><td class="p-3">Ignacio Chirioni</td></tr>
+            <tr><td class="p-3">T60</td><td class="p-3">Golden League F3</td><td class="p-3">Mitsubishi</td></tr>
+            <tr><td class="p-3">T66</td><td class="p-3">WDC F3</td><td class="p-3">Cristian Fernández</td></tr>
+            <tr><td class="p-3">T66</td><td class="p-3">Golden League F3</td><td class="p-3">Cristian Fernández</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- F4 -->
+    <section>
+      <h2 class="text-2xl font-bold text-pink-300 mb-4">F4</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border border-blue-600">
+          <thead class="bg-blue-700">
+            <tr>
+              <th class="p-3">Temporada</th>
+              <th class="p-3">Competición</th>
+              <th class="p-3">Ganador</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-600">
+            <tr><td class="p-3">T49</td><td class="p-3">F4 Primer Campeón</td><td class="p-3">Christian Horny</td></tr>
+            <tr><td class="p-3">T49</td><td class="p-3">Constructores F4</td><td class="p-3">Citroën Academy</td></tr>
+            <tr><td class="p-3">T51</td><td class="p-3">Real Cup F4</td><td class="p-3">Antonio Villalba</td></tr>
+            <tr><td class="p-3">T51</td><td class="p-3">WDC F4</td><td class="p-3">Antonio Villalba</td></tr>
+            <tr><td class="p-3">T58</td><td class="p-3">Constructores F4</td><td class="p-3">Alpine Academy</td></tr>
+            <tr><td class="p-3">T59</td><td class="p-3">WDC F4</td><td class="p-3">Marco Caracciolo</td></tr>
+            <tr><td class="p-3">T61</td><td class="p-3">Silver League F4</td><td class="p-3">Alpine Academy</td></tr>
+            <tr><td class="p-3">T61</td><td class="p-3">Copa Promises F4</td><td class="p-3">Diego Redondo</td></tr>
+            <tr><td class="p-3">T61</td><td class="p-3">WDC F4</td><td class="p-3">Arturo Yerena</td></tr>
+            <tr><td class="p-3">T62</td><td class="p-3">Copa Promises F4</td><td class="p-3">Iván Leiva</td></tr>
+            <tr><td class="p-3">T63</td><td class="p-3">Real Cup F4</td><td class="p-3">Lucas Mazacotte</td></tr>
+            <tr><td class="p-3">T66</td><td class="p-3">Constructores F4</td><td class="p-3">Alpine</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- F5 -->
+    <section>
+      <h2 class="text-2xl font-bold text-pink-300 mb-4">F5</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border border-blue-600">
+          <thead class="bg-blue-700">
+            <tr>
+              <th class="p-3">Temporada</th>
+              <th class="p-3">Competición</th>
+              <th class="p-3">Ganador</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-600">
+            <tr><td class="p-3">T55</td><td class="p-3">WDC F5</td><td class="p-3">Ignacio Chirioni</td></tr>
+            <tr><td class="p-3">T56</td><td class="p-3">Copa Promises F5</td><td class="p-3">Sebas Ramírez</td></tr>
+            <tr><td class="p-3">T59</td><td class="p-3">Bronze League F5</td><td class="p-3">Andretti</td></tr>
+            <tr><td class="p-3">T59</td><td class="p-3">Constructores F5</td><td class="p-3">Andretti</td></tr>
+            <tr><td class="p-3">T62</td><td class="p-3">Bronze League F5</td><td class="p-3">Alpine Juniors</td></tr>
+            <tr><td class="p-3">T63</td><td class="p-3">WDC F5</td><td class="p-3">Leandro Fernández</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Copas Internacionales -->
+    <section>
+      <h2 class="text-2xl font-bold text-pink-300 mb-4">Copas Internacionales</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border border-blue-600">
+          <thead class="bg-blue-700">
+            <tr>
+              <th class="p-3">Temporada</th>
+              <th class="p-3">Competición</th>
+              <th class="p-3">Ganador</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-600">
+            <tr><td class="p-3">T47</td><td class="p-3">Conference League</td><td class="p-3">Citroën</td></tr>
+            <tr><td class="p-3">T50</td><td class="p-3">Copa Libertadores</td><td class="p-3">Omar de León</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2025 Alpine Intercontinental Series - Fan Project</p>
+  <!-- Footer -->
+  <footer class="bg-blue-700 p-4 text-center text-blue-200 mt-12">
+    © 2025 Alpine Academy - Todos los derechos reservados
   </footer>
 </body>
 </html>
