@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine Academy Intercontinental Series</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #001F54;
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #FFD700;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #001F54;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Animación del logo */
+    .logo {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .logo img {
+      width: 150px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Resumen */
+    .resumen {
+      text-align: center;
+      padding: 30px;
+      background: #e9ecef;
+    }
+
+    .resumen h2 {
+      color: #001F54;
+    }
+
+    /* Equipos */
+    .equipos {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .equipos-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .equipo {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .equipo img {
+      width: 100%;
+      max-width: 120px;
+      margin: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .equipo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    /* Carrusel en móvil */
+    @media (max-width: 768px) {
+      .equipos-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .equipo {
+        flex: 0 0 auto;
+        width: 70%;
+        scroll-snap-align: center;
+      }
+    }
+
+    /* Redes sociales */
+    .social {
+      text-align: center;
+      padding: 20px;
+      background: #001F54;
+    }
+
+    .social a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social img {
+      width: 40px;
+      transition: transform 0.3s;
+    }
+
+    .social img:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #001F54;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Alpine Academy</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="f1.html">F1</a></li>
+        <li><a href="f2.html">F2</a></li>
+        <li><a href="f3.html">F3</a></li>
+        <li><a href="f4.html">F4</a></li>
+        <li><a href="f5.html">F5</a></li>
+        <li><a href="k6.html">K6</a></li>
+        <li><a href="trofeos.html">Trofeos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="logo">
+    <img src="https://i.imgur.com/j2vi8Ln.jpeg" alt="Logo Alpine Academy">
+  </section>
+
+  <section class="resumen">
+    <h2>Bienvenidos a Alpine Academy Intercontinental Series</h2>
+    <p>
+      Somos un equipo dedicado al desarrollo de jóvenes talentos en el automovilismo virtual, 
+      participando en múltiples categorías de la Intercontinental Series de iGP Manager.  
+      Nuestra misión es formar pilotos, CEOs y equipos bajo los valores de trabajo en equipo, disciplina y pasión.
+    </p>
+  </section>
+
+  <section class="equipos">
+    <h2>Nuestros Equipos</h2>
+    <div class="equipos-container">
+      <div class="equipo">
+        <a href="f1.html"><img src="https://i.imgur.com/94qD5zk.png" alt="F1"></a>
+        <p>F1</p>
+      </div>
+      <div class="equipo">
+        <a href="f2.html"><img src="https://i.imgur.com/qvAoPOr.jpeg" alt="F2"></a>
+        <p>F2</p>
+      </div>
+      <div class="equipo">
+        <a href="f3.html"><img src="https://i.imgur.com/FAFPTXN.jpeg" alt="F3"></a>
+        <p>F3</p>
+      </div>
+      <div class="equipo">
+        <a href="f4.html"><img src="https://i.imgur.com/mcIjDcB.jpeg" alt="F4"></a>
+        <p>F4</p>
+      </div>
+      <div class="equipo">
+        <a href="f5.html"><img src="https://i.imgur.com/pSAbA9h.jpeg" alt="F5"></a>
+        <p>F5</p>
+      </div>
+      <div class="equipo">
+        <a href="k6.html"><img src="https://i.imgur.com/UWHPu8R.jpeg" alt="K6"></a>
+        <p>K6</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="social">
+    <a href="https://x.com/InterAlpineF1?t=L1JbvwO9liCdJ7yexqw3rQ&s=09" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+    </a>
+    <a href="https://youtube.com/@intercontinentalseries2023?si=YbuOCfPuFTGNfiZ3" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Alpine Academy Intercontinental Series - Proyecto basado en iGP Manager</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
