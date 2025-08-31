@@ -1,219 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mitsubishi - F3</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #2b2b2b; /* gris más claro */
-      color: white;
-    }
-
-    header {
-      background-color: #3a3a3a;
-      padding: 15px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #e63946; /* rojo */
-    }
-
-    nav {
-      background-color: #222;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #e63946;
-    }
-
-    .resumen {
-      padding: 20px;
-      text-align: center;
-      background-color: #3a3a3a;
-      color: white;
-    }
-
-    .pilotos {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .pilotos h2 {
-      color: #e63946;
-      margin-bottom: 20px;
-    }
-
-    .pilotos-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
-
-    .piloto-card {
-      background-color: #3a3a3a;
-      border-radius: 12px;
-      padding: 15px;
-      width: 220px;
-      text-align: center;
-      transition: transform 0.3s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
-
-    .piloto-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .piloto-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .bandera {
-      width: 24px;
-      height: 16px;
-      vertical-align: middle;
-      margin-right: 6px;
-      border: 1px solid #fff;
-    }
-
-    .piloto-card h3 {
-      margin: 10px 0 5px;
-      font-size: 18px;
-    }
-
-    .piloto-card p {
-      margin: 0;
-      font-size: 14px;
-    }
-
-    .trofeos {
-      background-color: #3a3a3a;
-      padding: 40px 20px;
-    }
-
-    .trofeos h2 {
-      color: #e63946;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .trofeos-section {
-      margin-bottom: 20px;
-    }
-
-    .trofeos-section h3 {
-      color: #e63946;
-      margin-bottom: 10px;
-    }
-
-    .trofeos-section p {
-      margin: 5px 0;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mitsubishi F3</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body>
-  <header>
-    <h1>Mitsubishi - F3</h1>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Header / Menú superior (idéntico a F2, solo color) -->
+  <header class="bg-gray-950 text-white p-4 flex justify-between items-center">
+    <h1 class="text-lg font-bold">Alpine Academy</h1>
+    <nav>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="hover:text-gray-300">Inicio</a></li>
+        <li><a href="f1.html" class="hover:text-gray-300">F1</a></li>
+        <li><a href="f2.html" class="hover:text-gray-300">F2</a></li>
+        <li><a href="f3.html" class="hover:text-gray-300">F3</a></li>
+        <li><a href="f4.html" class="hover:text-gray-300">F4</a></li>
+        <li><a href="f5.html" class="hover:text-gray-300">F5</a></li>
+        <li><a href="k6.html" class="hover:text-gray-300">K6</a></li>
+      </ul>
+      <!-- Hamburguesa móvil -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none" aria-label="Abrir menú">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">F1</a>
-    <a href="#">F2</a>
-    <a href="#">F3</a>
-    <a href="#">F4</a>
-    <a href="#">F5</a>
-  </nav>
+  <!-- Menú móvil (idéntico a F2) -->
+  <div id="menu" class="hidden md:hidden bg-gray-800 text-white p-4 space-y-3">
+    <a href="index.html" class="block">Inicio</a>
+    <a href="f1.html" class="block">F1</a>
+    <a href="f2.html" class="block">F2</a>
+    <a href="f3.html" class="block">F3</a>
+    <a href="f4.html" class="block">F4</a>
+    <a href="f5.html" class="block">F5</a>
+    <a href="k6.html" class="block">K6</a>
+  </div>
 
-  <section class="resumen">
-    <p>El equipo Mitsubishi, múltiple campeón y un histórico en F3, formador de grandes talentos y campeones.</p>
-  </section>
+  <!-- Contenido -->
+  <main class="max-w-6xl mx-auto p-6">
+    <!-- Logo + Título (misma estructura que F2) -->
+    <div class="flex items-center space-x-4 mb-8">
+      <img src="https://i.imgur.com/FAFPTXN.jpeg" alt="Logo F3" class="w-20 h-20 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-extrabold text-red-500">Mitsubishi F3</h2>
+    </div>
 
-  <section class="pilotos">
-    <h2>Pilotos Titulares</h2>
-    <div class="pilotos-container">
-      <div class="piloto-card">
-        <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Anderson Leiva">
-        <h3><img class="bandera" src="https://flagcdn.com/w20/sv.png" alt="SV"> Anderson Leiva</h3>
-        <p>El Salvador</p>
+    <!-- Resumen del equipo -->
+    <p class="text-lg mb-10 leading-relaxed text-gray-200">
+      El equipo <b>Mitsubishi</b>, múltiple campeón y un histórico en F3, formador de grandes talentos y campeones.
+    </p>
+
+    <!-- Pilotos -->
+    <h2 class="text-2xl font-bold mb-6 text-red-500">👨‍✈️ Pilotos Titulares</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- Anderson Leiva -->
+      <div class="bg-gray-800 text-white p-4 rounded-xl shadow-lg text-center">
+        <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Anderson Leiva" class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
+        <h3 class="font-bold text-lg">Anderson Leiva</h3>
+        <p class="text-sm">
+          <img src="https://flagcdn.com/w20/sv.png" class="inline w-5 h-3 mr-1 align-[2px]" alt="SV">
+          El Salvador
+        </p>
       </div>
-      <div class="piloto-card">
-        <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="FranMandoOr">
-        <h3><img class="bandera" src="https://flagcdn.com/w20/mx.png" alt="MX"> FranMandoOr</h3>
-        <p>México</p>
+
+      <!-- FranMandoOr -->
+      <div class="bg-gray-800 text-white p-4 rounded-xl shadow-lg text-center">
+        <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="FranMandoOr" class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
+        <h3 class="font-bold text-lg">FranMandoOr</h3>
+        <p class="text-sm">
+          <img src="https://flagcdn.com/w20/mx.png" class="inline w-5 h-3 mr-1 align-[2px]" alt="MX">
+          México
+        </p>
       </div>
-      <div class="piloto-card">
-        <img src="https://i.imgur.com/uNdRAHj.jpeg" alt="Leandro Tabares">
-        <h3><img class="bandera" src="https://flagcdn.com/w20/co.png" alt="CO"> Leandro Tabares</h3>
-        <p>Colombia</p>
+
+      <!-- Leandro Tabares -->
+      <div class="bg-gray-800 text-white p-4 rounded-xl shadow-lg text-center">
+        <img src="https://i.imgur.com/uNdRAHj.jpeg" alt="Leandro Tabares" class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
+        <h3 class="font-bold text-lg">Leandro Tabares</h3>
+        <p class="text-sm">
+          <img src="https://flagcdn.com/w20/co.png" class="inline w-5 h-3 mr-1 align-[2px]" alt="CO">
+          Colombia
+        </p>
       </div>
-      <div class="piloto-card">
-        <img src="https://i.imgur.com/cifqFkx.jpeg" alt="Renato Alcántara">
-        <h3><img class="bandera" src="https://flagcdn.com/w20/co.png" alt="CO"> Renato Alcántara</h3>
-        <p>Colombia</p>
+
+      <!-- Renato Alcántara -->
+      <div class="bg-gray-800 text-white p-4 rounded-xl shadow-lg text-center">
+        <img src="https://i.imgur.com/cifqFkx.jpeg" alt="Renato Alcántara" class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
+        <h3 class="font-bold text-lg">Renato Alcántara</h3>
+        <p class="text-sm">
+          <img src="https://flagcdn.com/w20/co.png" class="inline w-5 h-3 mr-1 align-[2px]" alt="CO">
+          Colombia
+        </p>
       </div>
     </div>
-  </section>
 
-  <section class="trofeos">
-    <h2>🏆 Trofeos Históricos F3</h2>
+    <!-- Trofeos (mismo formato por categorías que F2) -->
+    <section class="trophies bg-gray-800 text-white p-6 rounded-2xl shadow-lg mt-12">
+      <h2 class="text-2xl font-bold mb-6 text-red-400">🏆 Trofeos Históricos F3</h2>
 
-    <div class="trofeos-section">
-      <h3>Campeonatos de Pilotos</h3>
-      <p>🏆 Valentín Ramos - T49</p>
-      <p>🏆 Diolys Pedroza - T52</p>
-      <p>🏆 Antonio Villalba - T54</p>
-      <p>🏆 Jesse Valim - T55</p>
-      <p>🏆 Gastón Juno Ades - T57</p>
-      <p>🏆 Ignacio Chirioni - T59</p>
-      <p>🏆 Cristian Fernández - T66</p>
-    </div>
+      <!-- Pilotos -->
+      <h3 class="text-xl font-semibold mb-2 text-red-300">Pilotos</h3>
+      <ul class="list-disc list-inside space-y-1 mb-4 text-gray-100">
+        <li>🏆 T49 - WDC F3 - Valentín Ramos</li>
+        <li>🏆 T52 - WDC F3 - Diolys Pedroza</li>
+        <li>🏆 T54 - WDC F3 - Antonio Villalba</li>
+        <li>🏆 T55 - WDC F3 - Jesse Valim</li>
+        <li>🏆 T57 - WDC F3 - Gastón Juno Ades</li>
+        <li>🏆 T59 - WDC F3 - Ignacio Chirioni</li>
+        <li>🏆 T66 - WDC F3 - Cristian Fernández</li>
+      </ul>
 
-    <div class="trofeos-section">
-      <h3>Campeonatos de Constructores</h3>
-      <p>🏆 Mitsubishi - T49</p>
-      <p>🏆 Mitsubishi - T52</p>
-      <p>🏆 Mitsubishi - T54</p>
-      <p>🏆 Mitsubishi - T55</p>
-      <p>🏆 Mitsubishi - T57</p>
-      <p>🏆 Mitsubishi - T58</p>
-      <p>🏆 Mitsubishi - T59</p>
-    </div>
+      <!-- Constructores -->
+      <h3 class="text-xl font-semibold mb-2 text-red-300">Constructores</h3>
+      <ul class="list-disc list-inside space-y-1 mb-4 text-gray-100">
+        <li>🏆 T52 - Constructores F3 - Mitsubishi</li>
+        <li>🏆 T54 - Constructores F3 - Mitsubishi</li>
+        <li>🏆 T55 - Constructores F3 - Mitsubishi</li>
+        <li>🏆 T57 - Constructores F3 - Mitsubishi</li>
+        <li>🏆 T58 - Constructores F3 - Mitsubishi</li>
+        <li>🏆 T59 - Constructores F3 - Mitsubishi</li>
+      </ul>
 
-    <div class="trofeos-section">
-      <h3>Golden League</h3>
-      <p>🏆 Mitsubishi - T54</p>
-      <p>🏆 Mitsubishi - T55</p>
-      <p>🏆 Mitsubishi - T57</p>
-      <p>🏆 Mitsubishi - T58</p>
-      <p>🏆 Mitsubishi - T59</p>
-      <p>🏆 Cristian Fernández - T66</p>
-    </div>
+      <!-- Golden League -->
+      <h3 class="text-xl font-semibold mb-2 text-red-300">Golden League</h3>
+      <ul class="list-disc list-inside space-y-1 mb-4 text-gray-100">
+        <li>🏆 T54 - Golden League F3 - Mitsubishi</li>
+        <li>🏆 T55 - Golden League F3 - Mitsubishi</li>
+        <li>🏆 T57 - Golden League F3 - Mitsubishi</li>
+        <li>🏆 T58 - Golden League F3 - Mitsubishi</li>
+        <li>🏆 T59 - Golden League F3 - Mitsubishi</li>
+        <li>🏆 T60 - Golden League F3 - Mitsubishi</li>
+        <li>🏆 T66 - Golden League F3 - Cristian Fernández</li>
+      </ul>
 
-    <div class="trofeos-section">
-      <h3>Rookie Cup</h3>
-      <p>🏆 Jesse Valim - T55</p>
-      <p>🏆 Gastón Juno Ades - T57</p>
-    </div>
-  </section>
+      <!-- Rookie Cup -->
+      <h3 class="text-xl font-semibold mb-2 text-red-300">Rookie Cup</h3>
+      <ul class="list-disc list-inside space-y-1 text-gray-100">
+        <li>🏆 T55 - Rookie Cup F3 - Jesse Valim</li>
+        <li>🏆 T57 - Rookie Cup F3 - Gastón Juno Ades</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer (mismo patrón) -->
+  <footer class="bg-gray-950 text-white p-4 text-center mt-12">
+    <p>© 2025 Mitsubishi F3 - Alpine Academy</p>
+  </footer>
+
+  <script>
+    // Menú hamburguesa (idéntico a F2 + cerrar al pulsar link)
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+    // Animaciones ScrollReveal (idénticas a F2)
+    ScrollReveal().reveal('.trophies', { delay: 200, distance: '50px', origin: 'bottom' });
+    ScrollReveal().reveal('.grid > div', { interval: 200, distance: '50px', origin: 'bottom' });
+  </script>
 </body>
 </html>
