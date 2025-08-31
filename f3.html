@@ -3,80 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpine Mitsubishi - F3</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="f3-page">
+  <title>Mitsubishi - F3</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: white;
+    }
 
-  <!-- Botón menú hamburguesa -->
+    header {
+      background-color: #2e2e2e;
+      padding: 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #e63946;
+    }
+
+    .resumen {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      color: white;
+    }
+
+    .pilotos {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .pilotos h2 {
+      color: #e63946;
+      margin-bottom: 20px;
+    }
+
+    .pilotos-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .piloto-card {
+      background-color: #2e2e2e;
+      border-radius: 12px;
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .piloto-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .piloto-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .piloto-card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .piloto-card p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .trofeos {
+      background-color: #333;
+      padding: 40px 20px;
+    }
+
+    .trofeos h2 {
+      color: #e63946;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .trofeos-section {
+      margin-bottom: 20px;
+    }
+
+    .trofeos-section h3 {
+      color: #e63946;
+      margin-bottom: 10px;
+    }
+
+    .trofeos-section p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
   <header>
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <h1>Alpine Mitsubishi - F3</h1>
+    <h1>Mitsubishi - F3</h1>
   </header>
 
-  <!-- Menú lateral -->
-  <nav id="side-menu" class="side-menu">
-    <a href="index.html">🏠 Inicio</a>
-    <a href="f1.html">F1</a>
-    <a href="f2.html">F2</a>
-    <a href="f3.html">F3</a>
-    <a href="f4.html">F4</a>
-    <a href="f5.html">F5</a>
-    <a href="k6.html">K6</a>
-    <a href="trofeos.html">🏆 Trofeos</a>
-    <a href="historia.html">📖 Historia</a>
-  </nav>
+  <section class="resumen">
+    <p>El equipo Mitsubishi, múltiple campeón y un histórico en F3, formador de grandes talentos y campeones.</p>
+  </section>
 
-  <!-- Contenido -->
-  <main>
-    <section>
-      <h2>Pilotos Titulares</h2>
-      <div class="pilotos">
-        <div class="piloto-card">
-          <img src="img/anderson.jpg" alt="Anderson Leiva">
-          <p>🇸🇻 Anderson Leiva (El Salvador)</p>
-        </div>
-        <div class="piloto-card">
-          <img src="img/fran.jpg" alt="FranMandoOr">
-          <p>🇲🇽 FranMandoOr (México)</p>
-        </div>
-        <div class="piloto-card">
-          <img src="img/leandro.jpg" alt="Leandro Tabares">
-          <p>🇨🇴 Leandro Tabares (Colombia)</p>
-        </div>
-        <div class="piloto-card">
-          <img src="img/renato.jpg" alt="Renato Alcántara">
-          <p>🇨🇴 Renato Alcántara (Colombia)</p>
-        </div>
+  <section class="pilotos">
+    <h2>Pilotos Titulares</h2>
+    <div class="pilotos-container">
+      <div class="piloto-card">
+        <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Anderson Leiva">
+        <h3>🇸🇻 Anderson Leiva</h3>
+        <p>El Salvador</p>
       </div>
-    </section>
+      <div class="piloto-card">
+        <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="FranMandoOr">
+        <h3>🇲🇽 FranMandoOr</h3>
+        <p>México</p>
+      </div>
+      <div class="piloto-card">
+        <img src="https://i.imgur.com/uNdRAHj.jpeg" alt="Leandro Tabares">
+        <h3>🇨🇴 Leandro Tabares</h3>
+        <p>Colombia</p>
+      </div>
+      <div class="piloto-card">
+        <img src="https://i.imgur.com/cifqFkx.jpeg" alt="Renato Alcántara">
+        <h3>🇨🇴 Renato Alcántara</h3>
+        <p>Colombia</p>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Sobre el Equipo</h2>
-      <p>
-        Alpine Mitsubishi representa la categoría F3 dentro de la Alpine Academy Intercontinental Series.  
-        Es uno de los equipos más exitosos en esta división, acumulando múltiples títulos de constructores y campeonatos de pilotos.
-      </p>
-    </section>
-  </main>
+  <section class="trofeos">
+    <h2>🏆 Trofeos Históricos F3</h2>
 
-  <footer>
-    <p>⚡ Alpine Academy Intercontinental Series – Basado en iGPManager ⚡</p>
-    <p>Herederos: Leandro Fernández & Angelo Lemus</p>
-  </footer>
+    <div class="trofeos-section">
+      <h3>Campeonatos de Pilotos</h3>
+      <p>🏆 Valentín Ramos - T49</p>
+      <p>🏆 Diolys Pedroza - T52</p>
+      <p>🏆 Antonio Villalba - T54</p>
+      <p>🏆 Jesse Valim - T55</p>
+      <p>🏆 Gastón Juno Ades - T57</p>
+      <p>🏆 Ignacio Chirioni - T59</p>
+      <p>🏆 Cristian Fernández - T66</p>
+    </div>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('side-menu');
-      menu.classList.toggle('open');
-    }
-    // cerrar el menú al hacer clic en un enlace
-    document.querySelectorAll('.side-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('side-menu').classList.remove('open');
-      });
-    });
-  </script>
+    <div class="trofeos-section">
+      <h3>Campeonatos de Constructores</h3>
+      <p>🏆 Mitsubishi - T49</p>
+      <p>🏆 Mitsubishi - T52</p>
+      <p>🏆 Mitsubishi - T54</p>
+      <p>🏆 Mitsubishi - T55</p>
+      <p>🏆 Mitsubishi - T57</p>
+      <p>🏆 Mitsubishi - T58</p>
+      <p>🏆 Mitsubishi - T59</p>
+    </div>
 
+    <div class="trofeos-section">
+      <h3>Golden League</h3>
+      <p>🏆 Mitsubishi - T54</p>
+      <p>🏆 Mitsubishi - T55</p>
+      <p>🏆 Mitsubishi - T57</p>
+      <p>🏆 Mitsubishi - T58</p>
+      <p>🏆 Mitsubishi - T59</p>
+      <p>🏆 Cristian Fernández - T66</p>
+    </div>
+
+    <div class="trofeos-section">
+      <h3>Rookie Cup</h3>
+      <p>🏆 Jesse Valim - T55</p>
+      <p>🏆 Gastón Juno Ades - T57</p>
+    </div>
+  </section>
 </body>
 </html>
