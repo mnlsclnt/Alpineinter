@@ -66,13 +66,8 @@
       gap: 20px;
     }
     .logo-f1 img {
-      width: 120px;
+      width: 100px;
       height: auto;
-    }
-
-    /* Título */
-    h1 {
-      color: #001f3f;
     }
 
     /* Pilotos */
@@ -83,11 +78,12 @@
       margin-top: 20px;
     }
     .piloto {
-      background: #fff;
+      background: #001f3f;
       padding: 15px;
       border-radius: 12px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      color: #fff;
     }
     .piloto img {
       width: 100%;
@@ -96,25 +92,31 @@
       border-radius: 12px;
       margin-bottom: 10px;
     }
-    .bandera {
-      font-size: 1.5rem;
-      margin-right: 5px;
-    }
     .piloto h3 {
       margin: 5px 0;
       font-size: 1.1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    .piloto h3 img.flag {
+      width: 22px;
+      height: auto;
+      border-radius: 3px;
     }
 
     /* Trofeos */
     .trofeos {
       margin-top: 30px;
       padding: 15px;
-      background: #fff;
+      background: #001f3f;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      color: #fff;
     }
     .trofeos h2 {
-      color: #001f3f;
+      color: #fff;
       margin-bottom: 10px;
     }
     .trofeos ul {
@@ -149,7 +151,7 @@
         align-items: flex-start;
       }
       .logo-f1 img {
-        width: 90px;
+        width: 80px;
       }
     }
   </style>
@@ -176,26 +178,26 @@
     <!-- Logo y título -->
     <div class="logo-f1">
       <img src="https://i.imgur.com/94qD5zk.png" alt="F1 Logo">
-      <h1>Equipo F1 - Alpine Royal Air Maroc</h1>
+      <h1>Equipo F1 - Alpine Academy</h1>
     </div>
 
     <!-- Pilotos -->
     <section class="pilotos">
       <div class="piloto">
         <img src="https://i.imgur.com/PG5CErl.jpeg" alt="Victor Escalante">
-        <h3>🇲🇽 Victor Escalante</h3>
+        <h3><img class="flag" src="https://flagcdn.com/w20/mx.png" alt="México"> Victor Escalante</h3>
       </div>
       <div class="piloto">
         <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Mauro Gentile">
-        <h3>🇦🇷 Mauro Gentile</h3>
+        <h3><img class="flag" src="https://flagcdn.com/w20/ar.png" alt="Argentina"> Mauro Gentile</h3>
       </div>
       <div class="piloto">
         <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="Ivan Flamini">
-        <h3>🇦🇷 Ivan Flamini</h3>
+        <h3><img class="flag" src="https://flagcdn.com/w20/ar.png" alt="Argentina"> Ivan Flamini</h3>
       </div>
       <div class="piloto">
         <img src="https://i.imgur.com/Ju8Brg3.jpeg" alt="Charles Evans">
-        <h3>🇲🇦 Charles Evans</h3>
+        <h3><img class="flag" src="https://flagcdn.com/w20/ma.png" alt="Marruecos"> Charles Evans</h3>
       </div>
     </section>
 
