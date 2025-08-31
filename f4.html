@@ -3,81 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpine BWT Academy - F4</title>
-  <link rel="stylesheet" href="style.css">
+  <title>F4 - BWT Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
 </head>
-<body class="f4-page">
+<body class="bg-gradient-to-b from-blue-900 to-pink-400 min-h-screen text-white">
 
-  <!-- Botón menú hamburguesa -->
-  <header>
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    <h1>Alpine BWT Academy - F4</h1>
-  </header>
-
-  <!-- Menú lateral -->
-  <nav id="side-menu" class="side-menu">
-    <a href="index.html">🏠 Inicio</a>
-    <a href="f1.html">F1</a>
-    <a href="f2.html">F2</a>
-    <a href="f3.html">F3</a>
-    <a href="f4.html">F4</a>
-    <a href="f5.html">F5</a>
-    <a href="k6.html">K6</a>
-    <a href="trofeos.html">🏆 Trofeos</a>
-    <a href="historia.html">📖 Historia</a>
+  <!-- Menú -->
+  <nav class="bg-pink-500 bg-opacity-90 p-4 flex justify-between items-center shadow-lg">
+    <h1 class="text-2xl font-bold">F4 - BWT Academy</h1>
+    <ul class="flex space-x-6 text-lg">
+      <li><a href="#pilotos" class="hover:text-blue-200">Pilotos</a></li>
+      <li><a href="#trofeos" class="hover:text-blue-200">Trofeos</a></li>
+    </ul>
   </nav>
 
-  <!-- Contenido -->
-  <main>
-    <section>
-      <h2>Pilotos Titulares</h2>
-      <div class="pilotos">
-        <div class="piloto-card">
-          <img src="img/matias.jpg" alt="Matias Moreno">
-          <p>🇦🇷 Matías Moreno (Argentina)</p>
-        </div>
-        <div class="piloto-card">
-          <img src="img/lautaro.jpg" alt="Lautaro Carballo">
-          <p>🇦🇷 Lautaro Carballo (Argentina)</p>
-        </div>
-        <div class="piloto-card">
-          <img src="img/martin.jpg" alt="Martin Elias">
-          <p>🇨🇴 Martín Elías (Colombia)</p>
-        </div>
-        <div class="piloto-card">
-          <img src="img/alex.jpg" alt="Alex Núñez">
-          <p>🇻🇪 Alex Núñez (Venezuela)</p>
-        </div>
+  <!-- Resumen del equipo -->
+  <section class="p-8 text-center">
+    <p class="text-xl max-w-3xl mx-auto">
+      El campeonato de F4 ha servido como base de formación para grandes talentos, 
+      respaldado por <span class="font-bold">BWT</span> en su rol de patrocinador principal, 
+      combinando desarrollo y competitividad.
+    </p>
+  </section>
+
+  <!-- Pilotos -->
+  <section id="pilotos" class="p-8">
+    <h2 class="text-3xl font-bold text-center mb-6">👨‍🚀 Pilotos Titulares</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Matías Moreno -->
+      <div class="bg-blue-800 rounded-2xl shadow-lg p-4 transform transition hover:scale-105">
+        <img src="https://i.imgur.com/Nsw57er.jpeg" alt="Matías Moreno" class="rounded-xl w-full h-56 object-cover mb-4">
+        <h3 class="text-xl font-semibold">Matías Moreno</h3>
+        <p class="text-sm flex items-center">
+          <img src="https://flagcdn.com/w20/ar.png" class="inline w-6 h-4 mr-2"> Argentina
+        </p>
       </div>
-    </section>
 
-    <section>
-      <h2>Sobre el Equipo</h2>
-      <p>
-        Alpine BWT Academy representa la categoría F4 dentro de la Alpine Academy Intercontinental Series.  
-        Este equipo es clave en la formación de jóvenes talentos, muchos de los cuales ascienden a categorías superiores.  
-        Sus colores icónicos son rosa, blanco y azul, característicos del patrocinio de BWT.
-      </p>
-    </section>
-  </main>
+      <!-- Lautaro Carballo -->
+      <div class="bg-blue-800 rounded-2xl shadow-lg p-4 transform transition hover:scale-105">
+        <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="Lautaro Carballo" class="rounded-xl w-full h-56 object-cover mb-4">
+        <h3 class="text-xl font-semibold">Lautaro Carballo</h3>
+        <p class="text-sm flex items-center">
+          <img src="https://flagcdn.com/w20/ar.png" class="inline w-6 h-4 mr-2"> Argentina
+        </p>
+      </div>
 
-  <footer>
-    <p>⚡ Alpine Academy Intercontinental Series – Basado en iGPManager ⚡</p>
-    <p>Herederos: Leandro Fernández & Angelo Lemus</p>
-  </footer>
+      <!-- Martín Elías -->
+      <div class="bg-blue-800 rounded-2xl shadow-lg p-4 transform transition hover:scale-105">
+        <img src="https://i.imgur.com/uNdRAHj.jpeg" alt="Martín Elías" class="rounded-xl w-full h-56 object-cover mb-4">
+        <h3 class="text-xl font-semibold">Martín Elías</h3>
+        <p class="text-sm flex items-center">
+          <img src="https://flagcdn.com/w20/co.png" class="inline w-6 h-4 mr-2"> Colombia
+        </p>
+      </div>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('side-menu');
-      menu.classList.toggle('open');
-    }
-    // cerrar el menú al hacer clic en un enlace
-    document.querySelectorAll('.side-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('side-menu').classList.remove('open');
-      });
-    });
-  </script>
+      <!-- Alex Núñez -->
+      <div class="bg-blue-800 rounded-2xl shadow-lg p-4 transform transition hover:scale-105">
+        <img src="https://i.imgur.com/cifqFkx.jpeg" alt="Alex Núñez" class="rounded-xl w-full h-56 object-cover mb-4">
+        <h3 class="text-xl font-semibold">Alex Núñez</h3>
+        <p class="text-sm flex items-center">
+          <img src="https://flagcdn.com/w20/ve.png" class="inline w-6 h-4 mr-2"> Venezuela
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trofeos -->
+  <section id="trofeos" class="p-8">
+    <h2 class="text-3xl font-bold text-center mb-6">🏆 Trofeos Históricos F4</h2>
+    <div class="bg-pink-600 rounded-2xl shadow-lg p-6 max-w-3xl mx-auto">
+
+      <h3 class="text-2xl font-semibold mb-2">Pilotos</h3>
+      <ul class="list-disc ml-6 mb-4">
+        <li>🏆 T49 – Primer Campeón: Christian Horny</li>
+        <li>🏆 T51 – WDC: Antonio Villalba</li>
+        <li>🏆 T59 – WDC: Marco Caracciolo</li>
+        <li>🏆 T61 – WDC: Arturo Yerena</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mb-2">Constructores</h3>
+      <ul class="list-disc ml-6 mb-4">
+        <li>🏆 T49 – Citroën Academy</li>
+        <li>🏆 T58 – Alpine Academy</li>
+        <li>🏆 T66 – Alpine</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mb-2">Copas Internacionales</h3>
+      <ul class="list-disc ml-6 mb-4">
+        <li>🏆 T51 – Real Cup: Antonio Villalba</li>
+        <li>🏆 T63 – Real Cup: Lucas Mazacotte</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mb-2">Copas Promesas / Juveniles</h3>
+      <ul class="list-disc ml-6 mb-4">
+        <li>🏆 T61 – Copa Promises: Diego Redondo</li>
+        <li>🏆 T62 – Copa Promises: Iván Leiva</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mb-2">Otros logros</h3>
+      <ul class="list-disc ml-6">
+        <li>🥈 T61 – Silver League: Alpine Academy</li>
+      </ul>
+
+    </div>
+  </section>
 
 </body>
 </html>
