@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine Academy - F1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    /* Menú */
+    header {
+      background: #001f3f;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Menú hamburguesa */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Secciones */
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #001f3f;
+      margin-bottom: 20px;
+    }
+
+    /* Equipo */
+    .equipo img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Pilotos */
+    .pilotos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #001f3f, #003366);
+      border-radius: 20px;
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      background: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #1da1f2;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a.youtube {
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Alpine Academy - F1</h1>
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="f1.html">F1</a>
+      <a href="f2.html">F2</a>
+      <a href="f3.html">F3</a>
+      <a href="f4.html">F4</a>
+      <a href="f5.html">F5</a>
+      <a href="k6.html">K6</a>
+      <a href="historia.html">Historia</a>
+      <a href="trofeos.html">Trofeos</a>
+    </nav>
+  </header>
+
+  <!-- Equipo -->
+  <section class="equipo">
+    <h2>Equipo de F1</h2>
+    <img src="https://i.imgur.com/94qD5zk.png" alt="Alpine F1">
+    <p>La escudería Alpine Academy F1 representa la máxima categoría de nuestra academia en la liga iGP Manager.</p>
+  </section>
+
+  <!-- Pilotos -->
+  <section class="pilotos-section">
+    <h2>Pilotos Titulares</h2>
+    <div class="pilotos">
+      <!-- Piloto 1 -->
+      <div class="card">
+        <img src="https://i.imgur.com/PG5CErl.jpeg" alt="Victor Escalante">
+        <h3>Víctor Escalante</h3>
+        <p>Piloto Titular - F1</p>
+      </div>
+
+      <!-- Aquí se añadirán los demás pilotos -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Síguenos en redes:</p>
+    <a href="https://x.com/InterAlpineF1?t=L1JbvwO9liCdJ7yexqw3rQ&s=09" target="_blank">Twitter/X</a> |
+    <a href="https://youtube.com/@intercontinentalseries2023?si=YbuOCfPuFTGNfiZ3" class="youtube" target="_blank">YouTube</a>
+    <p>&copy; 2025 Alpine Academy Intercontinental Series</p>
+  </footer>
+</body>
+</html>
