@@ -1,99 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F5 - Pilotos y Trofeos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BWT F5</title>
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body class="bg-blue-900 text-gray-100 font-sans">
 
-  <!-- Menú -->
-  <nav class="bg-blue-800 text-white shadow-md">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold text-pink-400">🏎️ Fórmula 5</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#" class="hover:text-pink-400">Inicio</a></li>
-        <li><a href="#" class="hover:text-pink-400">Pilotos</a></li>
-        <li><a href="#" class="hover:text-pink-400">Trofeos</a></li>
-        <li><a href="#" class="hover:text-pink-400">Contacto</a></li>
+  <!-- Header -->
+  <header class="bg-pink-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-lg font-bold">Alpine Academy</h1>
+    <nav>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="hover:text-blue-200">Inicio</a></li>
+        <li><a href="f1.html" class="hover:text-blue-200">F1</a></li>
+        <li><a href="f2.html" class="hover:text-blue-200">F2</a></li>
+        <li><a href="f3.html" class="hover:text-blue-200">F3</a></li>
+        <li><a href="f4.html" class="hover:text-blue-200">F4</a></li>
+        <li><a href="f5.html" class="hover:text-blue-200">F5</a></li>
+        <li><a href="k6.html" class="hover:text-blue-200">K6</a></li>
       </ul>
-    </div>
-  </nav>
-
-  <!-- Encabezado -->
-  <header class="text-center my-10">
-    <h2 class="text-4xl font-bold text-pink-400">Equipo Fórmula 5</h2>
-    <p class="mt-4 text-lg text-gray-200">
-      La categoría F5 es la base formativa del automovilismo, donde nacen futuros campeones y se consolidan jóvenes talentos.
-    </p>
+      <!-- Hamburguesa -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none" aria-label="Abrir menú">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
   </header>
 
-  <!-- Pilotos -->
-  <section class="container mx-auto px-6">
-    <h3 class="text-2xl font-semibold mb-6 text-pink-300">👨‍🚀 Pilotos Titulares</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+  <!-- Menú móvil -->
+  <div id="menu" class="hidden md:hidden bg-pink-600 text-white p-4 space-y-3">
+    <a href="index.html" class="block">Inicio</a>
+    <a href="f1.html" class="block">F1</a>
+    <a href="f2.html" class="block">F2</a>
+    <a href="f3.html" class="block">F3</a>
+    <a href="f4.html" class="block">F4</a>
+    <a href="f5.html" class="block">F5</a>
+    <a href="k6.html" class="block">K6</a>
+  </div>
 
+  <!-- Contenido -->
+  <main class="max-w-6xl mx-auto p-6">
+    <!-- Logo + Título -->
+    <div class="flex items-center space-x-4 mb-8">
+      <img src="https://i.imgur.com/mcIjDcB.jpeg" alt="Logo F5 BWT" class="w-20 h-20 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-extrabold text-pink-400">Alpine Academy BWT F5</h2>
+    </div>
+
+    <!-- Resumen -->
+    <p class="text-lg mb-10 leading-relaxed text-blue-100">
+      La categoría <b>F5</b> representa la base inicial del automovilismo en la Alpine Academy. 
+      Con el patrocinio de <b>BWT</b>, es el primer paso donde jóvenes talentos muestran su potencial 
+      y comienzan el camino hacia F4, F3, F2 y eventualmente F1.
+    </p>
+
+    <!-- Pilotos -->
+    <h2 class="text-2xl font-bold mb-6 text-pink-400">👨‍✈️ Pilotos Titulares</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
       <!-- Rafael Costa -->
-      <div class="bg-blue-800 text-white p-4 rounded-xl shadow-lg text-center transform transition duration-300 hover:scale-105">
-        <img src="https://i.imgur.com/bpOU2LQ.jpeg" alt="Rafael Costa" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-pink-400">
-        <h4 class="text-xl font-bold">🇹🇷 Rafael Costa</h4>
-        <p class="text-gray-300">Turquía</p>
+      <div class="bg-blue-800 text-white p-4 rounded-xl shadow-lg text-center">
+        <img src="https://i.imgur.com/bpOU2LQ.jpeg" alt="Rafael Costa"
+             class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
+        <h3 class="font-bold text-lg">Rafael Costa</h3>
+        <p class="text-sm">
+          <img src="https://flagcdn.com/w20/tr.png" class="inline w-5 h-3 mr-1 align-[2px]" alt="TR">
+          Turquía
+        </p>
       </div>
 
       <!-- Mick Sol -->
-      <div class="bg-blue-800 text-white p-4 rounded-xl shadow-lg text-center transform transition duration-300 hover:scale-105">
-        <img src="https://i.imgur.com/uNdRAHj.jpeg" alt="Mick Sol" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-pink-400">
-        <h4 class="text-xl font-bold">🏴 Mick Sol</h4>
-        <p class="text-gray-300">Andorra</p>
+      <div class="bg-blue-800 text-white p-4 rounded-xl shadow-lg text-center">
+        <img src="https://i.imgur.com/uNdRAHj.jpeg" alt="Mick Sol"
+             class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
+        <h3 class="font-bold text-lg">Mick Sol</h3>
+        <p class="text-sm">
+          <img src="https://flagcdn.com/w20/ad.png" class="inline w-5 h-3 mr-1 align-[2px]" alt="AD">
+          Andorra
+        </p>
       </div>
 
       <!-- Guido Lima -->
-      <div class="bg-blue-800 text-white p-4 rounded-xl shadow-lg text-center transform transition duration-300 hover:scale-105">
-        <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="Guido Lima" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-pink-400">
-        <h4 class="text-xl font-bold">🇵🇪 Guido Lima</h4>
-        <p class="text-gray-300">Perú</p>
+      <div class="bg-blue-800 text-white p-4 rounded-xl shadow-lg text-center">
+        <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="Guido Lima"
+             class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
+        <h3 class="font-bold text-lg">Guido Lima</h3>
+        <p class="text-sm">
+          <img src="https://flagcdn.com/w20/pe.png" class="inline w-5 h-3 mr-1 align-[2px]" alt="PE">
+          Perú
+        </p>
       </div>
 
       <!-- Saúl González -->
-      <div class="bg-blue-800 text-white p-4 rounded-xl shadow-lg text-center transform transition duration-300 hover:scale-105">
-        <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Saúl González" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-pink-400">
-        <h4 class="text-xl font-bold">🇪🇸 Saúl González</h4>
-        <p class="text-gray-300">España</p>
+      <div class="bg-blue-800 text-white p-4 rounded-xl shadow-lg text-center">
+        <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Saúl González"
+             class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
+        <h3 class="font-bold text-lg">Saúl González</h3>
+        <p class="text-sm">
+          <img src="https://flagcdn.com/w20/es.png" class="inline w-5 h-3 mr-1 align-[2px]" alt="ES">
+          España
+        </p>
       </div>
-
     </div>
-  </section>
 
-  <!-- Trofeos -->
-  <section class="container mx-auto px-6 my-12">
-    <h3 class="text-2xl font-semibold mb-6 text-pink-300">🏆 Trofeos Históricos F5</h3>
+    <!-- Trofeos -->
+    <section class="trophies bg-pink-600 text-white p-6 rounded-2xl shadow-lg mt-12">
+      <h2 class="text-2xl font-bold mb-6 text-blue-100">🏆 Trofeos Históricos F5</h2>
 
-    <div class="bg-blue-800 p-6 rounded-xl shadow-lg">
-      <h4 class="text-xl font-bold text-pink-400 mb-4">Pilotos</h4>
-      <ul class="list-disc pl-6 space-y-2 text-gray-200">
-        <li>🏆 WDC F5 - Ignacio Chirioni (T55)</li>
-        <li>🏆 WDC F5 - Leandro Fernández (T63)</li>
+      <!-- Pilotos -->
+      <h3 class="text-xl font-semibold mb-2 text-blue-50">Pilotos</h3>
+      <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>🏆 T71 – Primer Campeón F5: Miguel Toro</li>
+        <li>🏆 T72 – WDC: Alejandro Jiménez</li>
       </ul>
 
-      <h4 class="text-xl font-bold text-pink-400 mt-6 mb-4">Constructores</h4>
-      <ul class="list-disc pl-6 space-y-2 text-gray-200">
-        <li>🏆 Constructores F5 - Andretti (T59)</li>
+      <!-- Constructores -->
+      <h3 class="text-xl font-semibold mb-2 text-blue-50">Constructores</h3>
+      <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>🏆 T71 – Citroën Academy</li>
+        <li>🏆 T73 – Alpine Academy</li>
       </ul>
 
-      <h4 class="text-xl font-bold text-pink-400 mt-6 mb-4">Copas Internacionales</h4>
-      <ul class="list-disc pl-6 space-y-2 text-gray-200">
-        <li>🏆 Copa Promises F5 - Sebas Ramírez (T56)</li>
-        <li>🥉 Bronze League F5 - Andretti (T59)</li>
+      <!-- Copas Internacionales -->
+      <h3 class="text-xl font-semibold mb-2 text-blue-50">Copas Internacionales</h3>
+      <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>🏆 T72 – Real Cup: Alejandro Jiménez</li>
       </ul>
-    </div>
-  </section>
+
+      <!-- Copas Promesas / Juveniles -->
+      <h3 class="text-xl font-semibold mb-2 text-blue-50">Copas Promesas / Juveniles</h3>
+      <ul class="list-disc list-inside space-y-1 mb-4">
+        <li>🏆 T72 – Copa Promises: Diego Moreno</li>
+      </ul>
+
+      <!-- Otros logros -->
+      <h3 class="text-xl font-semibold mb-2 text-blue-50">Otros logros</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li>🥈 T72 – Silver League: Alpine Academy</li>
+      </ul>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="text-center py-6 bg-blue-800 text-gray-300 mt-10">
-    <p>© 2025 Fórmula 5 - Todos los derechos reservados</p>
+  <footer class="bg-pink-600 text-white p-4 text-center mt-12">
+    <p>© 2025 Alpine Academy BWT F5 - Alpine Academy</p>
   </footer>
 
+  <script>
+    // Menú móvil
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+    // Animaciones
+    ScrollReveal().reveal('.trophies', { delay: 200, distance: '50px', origin: 'bottom' });
+    ScrollReveal().reveal('.grid > div', { interval: 200, distance: '50px', origin: 'bottom' });
+  </script>
 </body>
 </html>
