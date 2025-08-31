@@ -3,185 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpine Academy Intercontinental Series</title>
+  <title>Alpine Academy</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #001f3f, #0074D9);
-      color: white;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
     }
 
     header {
-      background: #001f3f;
+      background: #001845;
+      color: white;
       padding: 15px;
+      text-align: center;
+      position: relative;
     }
 
-    /* Menú horizontal PC */
-    nav ul {
+    /* Logo animado */
+    .logo {
+      width: 120px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* Menú */
+    nav {
+      background: #003566;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
       list-style: none;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
     }
 
-    nav ul li a {
+    .menu li {
+      margin: 0 15px;
+    }
+
+    .menu a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    nav ul li a:hover {
+    .menu a:hover {
       text-decoration: underline;
     }
 
-    /* Menú hamburguesa en móvil */
-    .menu-toggle {
+    /* Hamburguesa */
+    .hamburger {
       display: none;
-      flex-direction: column;
+      font-size: 25px;
       cursor: pointer;
-    }
-
-    .bar {
-      height: 3px;
-      width: 25px;
-      background-color: white;
-      margin: 3px 0;
+      position: absolute;
+      right: 20px;
+      top: 20px;
     }
 
     @media (max-width: 768px) {
-      nav ul {
+      .menu {
         display: none;
         flex-direction: column;
-        background: #001f3f;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
+        background: #003566;
       }
-      nav ul.show {
+      .menu.active {
         display: flex;
       }
-      .menu-toggle {
-        display: flex;
+      .hamburger {
+        display: block;
       }
     }
 
-    /* Imagen saltando */
-    .bounce {
-      width: 200px;
-      margin: 30px auto;
-      animation: bounce 2s infinite;
+    /* Secciones */
+    section {
+      padding: 40px;
+      text-align: center;
     }
 
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-      40% {transform: translateY(-30px);}
-      60% {transform: translateY(-15px);}
+    section img {
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-top: 15px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
-    /* Sección equipos */
-    .equipos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .equipo-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-
-    .equipo-card:hover {
+    section img:hover {
       transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
     }
 
-    .equipo-card img {
-      width: 80px;
-      margin-bottom: 10px;
+    footer {
+      background: #001845;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* Redes sociales */
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .social-links a img {
+      width: 35px;
+      height: 35px;
+      filter: brightness(0) invert(1); /* blanco */
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="menu-toggle" id="menu-toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+    <img src="https://i.imgur.com/j2vi8Ln.jpeg" alt="Logo Alpine Academy" class="logo">
+    <h1>Alpine Academy</h1>
+    <span class="hamburger" onclick="toggleMenu()">☰</span>
     <nav>
-      <ul id="menu">
+      <ul class="menu" id="menu">
         <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Historia</a></li>
         <li><a href="f1.html">F1</a></li>
         <li><a href="f2.html">F2</a></li>
         <li><a href="f3.html">F3</a></li>
         <li><a href="f4.html">F4</a></li>
         <li><a href="f5.html">F5</a></li>
-        <li><a href="historia.html">Historia</a></li>
+        <li><a href="k6.html">K6</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h1>Alpine Academy Intercontinental Series</h1>
-    <p>Basado en la liga Intercontinental Series del videojuego iGP Manager</p>
+  <section>
+    <h2>Bienvenidos a Alpine Academy</h2>
+    <p>
+      Desde la Temporada 47, Alpine Academy se ha dedicado a formar campeones.  
+      No buscamos a los mejores: los hacemos mejores.  
+      Nuestro legado combina títulos en múltiples categorías con la formación de pilotos, CEOs y equipos que hoy brillan en toda la Intercontinental Series.
+    </p>
+  </section>
 
-    <!-- Imagen saltando -->
-    <img src="logo.png" alt="Logo Alpine Academy" class="bounce">
+  <section>
+    <h2>Equipo de F1</h2>
+    <img src="https://i.imgur.com/94qD5zk.png" alt="Equipo F1 Alpine">
+  </section>
 
-    <h2>Nuestros Equipos</h2>
-    <div class="equipos">
-      <div class="equipo-card">
-        <a href="f1.html">
-          <img src="f1.png" alt="F1">
-          <p>Fórmula 1</p>
-        </a>
-      </div>
-      <div class="equipo-card">
-        <a href="f2.html">
-          <img src="f2.png" alt="F2">
-          <p>Fórmula 2</p>
-        </a>
-      </div>
-      <div class="equipo-card">
-        <a href="f3.html">
-          <img src="f3.png" alt="F3">
-          <p>Fórmula 3</p>
-        </a>
-      </div>
-      <div class="equipo-card">
-        <a href="f4.html">
-          <img src="f4.png" alt="F4">
-          <p>Fórmula 4</p>
-        </a>
-      </div>
-      <div class="equipo-card">
-        <a href="f5.html">
-          <img src="f5.png" alt="F5">
-          <p>Fórmula 5</p>
-        </a>
-      </div>
-    </div>
-  </main>
+  <section>
+    <h2>Equipo de F2</h2>
+    <img src="https://i.imgur.com/qvAoPOr.jpeg" alt="Equipo F2 Alpine">
+  </section>
+
+  <section>
+    <h2>Equipo de F3</h2>
+    <img src="https://i.imgur.com/FAFPTXN.jpeg" alt="Equipo F3 Alpine">
+  </section>
+
+  <section>
+    <h2>Equipo de F4</h2>
+    <img src="https://i.imgur.com/mcIjDcB.jpeg" alt="Equipo F4 Alpine">
+  </section>
+
+  <section>
+    <h2>Equipo de F5</h2>
+    <img src="https://i.imgur.com/pSAbA9h.jpeg" alt="Equipo F5 Alpine">
+  </section>
+
+  <section>
+    <h2>Equipo de K6</h2>
+    <img src="https://i.imgur.com/UWHPu8R.jpeg" alt="Equipo K6 Alpine">
+  </section>
 
   <footer>
-    <p>&copy; 2025 Alpine Academy Intercontinental Series.  
-    Herederos: Leandro Fernández & Angelo Lemus</p>
+    <p>© 2025 Alpine Academy - "No buscamos a los mejores, los hacemos mejores"</p>
+    <div class="social-links">
+      <a href="https://x.com/InterAlpineF1?t=L1JbvwO9liCdJ7yexqw3rQ&s=09" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="X (Twitter)">
+      </a>
+      <a href="https://youtube.com/@intercontinentalseries2023?si=YbuOCfPuFTGNfiZ3" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </a>
+    </div>
   </footer>
 
   <script>
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("show");
-    });
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
   </script>
 </body>
 </html>
