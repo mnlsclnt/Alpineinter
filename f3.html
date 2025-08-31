@@ -9,10 +9,10 @@
   <!-- ScrollReveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body class="bg-gray-800 text-gray-100 font-sans"> <!-- Fondo más claro -->
 
-  <!-- Header / Menú superior (idéntico a F2, solo color) -->
-  <header class="bg-gray-950 text-white p-4 flex justify-between items-center">
+  <!-- Header / Menú superior -->
+  <header class="bg-gray-700 text-white p-4 flex justify-between items-center"> <!-- Gris suave -->
     <h1 class="text-lg font-bold">Alpine Academy</h1>
     <nav>
       <ul class="hidden md:flex space-x-6">
@@ -36,8 +36,8 @@
     </nav>
   </header>
 
-  <!-- Menú móvil (idéntico a F2) -->
-  <div id="menu" class="hidden md:hidden bg-gray-800 text-white p-4 space-y-3">
+  <!-- Menú móvil -->
+  <div id="menu" class="hidden md:hidden bg-gray-700 text-white p-4 space-y-3"> <!-- Gris suave -->
     <a href="index.html" class="block">Inicio</a>
     <a href="f1.html" class="block">F1</a>
     <a href="f2.html" class="block">F2</a>
@@ -49,7 +49,7 @@
 
   <!-- Contenido -->
   <main class="max-w-6xl mx-auto p-6">
-    <!-- Logo + Título (misma estructura que F2) -->
+    <!-- Logo + Título -->
     <div class="flex items-center space-x-4 mb-8">
       <img src="https://i.imgur.com/FAFPTXN.jpeg" alt="Logo F3" class="w-20 h-20 rounded-lg shadow-lg">
       <h2 class="text-3xl font-extrabold text-red-500">Mitsubishi F3</h2>
@@ -64,7 +64,7 @@
     <h2 class="text-2xl font-bold mb-6 text-red-500">👨‍✈️ Pilotos Titulares</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
       <!-- Anderson Leiva -->
-      <div class="bg-gray-800 text-white p-4 rounded-xl shadow-lg text-center">
+      <div class="bg-gray-700 text-white p-4 rounded-xl shadow-lg text-center">
         <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Anderson Leiva" class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
         <h3 class="font-bold text-lg">Anderson Leiva</h3>
         <p class="text-sm">
@@ -74,7 +74,7 @@
       </div>
 
       <!-- FranMandoOr -->
-      <div class="bg-gray-800 text-white p-4 rounded-xl shadow-lg text-center">
+      <div class="bg-gray-700 text-white p-4 rounded-xl shadow-lg text-center">
         <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="FranMandoOr" class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
         <h3 class="font-bold text-lg">FranMandoOr</h3>
         <p class="text-sm">
@@ -84,7 +84,7 @@
       </div>
 
       <!-- Leandro Tabares -->
-      <div class="bg-gray-800 text-white p-4 rounded-xl shadow-lg text-center">
+      <div class="bg-gray-700 text-white p-4 rounded-xl shadow-lg text-center">
         <img src="https://i.imgur.com/uNdRAHj.jpeg" alt="Leandro Tabares" class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
         <h3 class="font-bold text-lg">Leandro Tabares</h3>
         <p class="text-sm">
@@ -94,7 +94,7 @@
       </div>
 
       <!-- Renato Alcántara -->
-      <div class="bg-gray-800 text-white p-4 rounded-xl shadow-lg text-center">
+      <div class="bg-gray-700 text-white p-4 rounded-xl shadow-lg text-center">
         <img src="https://i.imgur.com/cifqFkx.jpeg" alt="Renato Alcántara" class="w-32 h-32 object-cover rounded-full mx-auto mb-3 border-4 border-white">
         <h3 class="font-bold text-lg">Renato Alcántara</h3>
         <p class="text-sm">
@@ -104,8 +104,8 @@
       </div>
     </div>
 
-    <!-- Trofeos (mismo formato por categorías que F2) -->
-    <section class="trophies bg-gray-800 text-white p-6 rounded-2xl shadow-lg mt-12">
+    <!-- Trofeos -->
+    <section class="trophies bg-gray-700 text-white p-6 rounded-2xl shadow-lg mt-12">
       <h2 class="text-2xl font-bold mb-6 text-red-400">🏆 Trofeos Históricos F3</h2>
 
       <!-- Pilotos -->
@@ -152,19 +152,17 @@
     </section>
   </main>
 
-  <!-- Footer (mismo patrón) -->
-  <footer class="bg-gray-950 text-white p-4 text-center mt-12">
+  <!-- Footer -->
+  <footer class="bg-gray-700 text-white p-4 text-center mt-12">
     <p>© 2025 Mitsubishi F3 - Alpine Academy</p>
   </footer>
 
   <script>
-    // Menú hamburguesa (idéntico a F2 + cerrar al pulsar link)
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
     btn.addEventListener('click', () => menu.classList.toggle('hidden'));
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
 
-    // Animaciones ScrollReveal (idénticas a F2)
     ScrollReveal().reveal('.trophies', { delay: 200, distance: '50px', origin: 'bottom' });
     ScrollReveal().reveal('.grid > div', { interval: 200, distance: '50px', origin: 'bottom' });
   </script>
