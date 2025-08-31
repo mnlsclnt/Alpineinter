@@ -79,20 +79,33 @@
     /* Secciones */
     section {
       padding: 40px 20px;
-      text-align: center;
     }
 
     section h2 {
       color: #001f3f;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     /* Equipo */
+    .equipo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: left;
+    }
+
     .equipo img {
-      width: 300px;
+      width: 200px;
       max-width: 90%;
-      border-radius: 15px;
+      border-radius: 10px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .equipo-texto {
+      max-width: 500px;
     }
 
     /* Pilotos */
@@ -125,6 +138,25 @@
       border-radius: 50%;
       border: 3px solid #fff;
       box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+    /* Trofeos */
+    .trofeos {
+      text-align: center;
+    }
+
+    .trofeos ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .trofeos li {
+      margin: 8px 0;
+      font-weight: bold;
     }
 
     footer {
@@ -169,10 +201,14 @@
   </header>
 
   <!-- Equipo -->
-  <section class="equipo">
+  <section>
     <h2>Equipo de F1</h2>
-    <img src="https://i.imgur.com/94qD5zk.png" alt="Alpine F1">
-    <p>La escudería Alpine Academy F1 representa la máxima categoría de nuestra academia en la liga iGP Manager.</p>
+    <div class="equipo">
+      <img src="https://i.imgur.com/94qD5zk.png" alt="Alpine F1">
+      <div class="equipo-texto">
+        <p>La escudería Alpine Academy F1 representa la máxima categoría de nuestra academia en la liga iGP Manager. Nuestro compromiso va más allá de competir: formamos pilotos y CEOs que dejan huella en cada temporada.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Pilotos -->
@@ -183,11 +219,24 @@
       <div class="card">
         <img src="https://i.imgur.com/PG5CErl.jpeg" alt="Victor Escalante">
         <h3>Víctor Escalante</h3>
+        <p>🇲🇽 México</p>
         <p>Piloto Titular - F1</p>
       </div>
 
       <!-- Aquí se añadirán los demás pilotos -->
     </div>
+  </section>
+
+  <!-- Trofeos -->
+  <section class="trofeos">
+    <h2>Trofeos Históricos en F1</h2>
+    <ul>
+      <li>🏆 Campeón de Constructores T47</li>
+      <li>🏆 Campeón de Pilotos T48</li>
+      <li>🥈 Subcampeón de Constructores T49</li>
+      <li>🥉 Tercer Lugar de Pilotos T50</li>
+      <li>🏆 Campeón de Pilotos T52</li>
+    </ul>
   </section>
 
   <!-- Footer -->
