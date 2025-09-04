@@ -1,246 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpine Academy - F1</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpine F1 - Intercontinental Series</title>
+<link rel="stylesheet" href="https://cdn.tailwindcss.com">
+<style>
+/* Logo animado */
+.logo img { width: 150px; animation: bounce 2s infinite; }
+@keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);} }
 
-    /* Menú */
-    header {
-      background: #001f3f;
-      color: #fff;
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav .logo {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    /* Contenido */
-    .container {
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* Logo */
-    .logo-f1 {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .logo-f1 img {
-      width: 100px;
-      height: auto;
-    }
-
-    /* Pilotos */
-    .pilotos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .piloto {
-      background: #001f3f;
-      padding: 15px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      color: #fff;
-    }
-    .piloto img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 10px;
-    }
-    .piloto h3 {
-      margin: 5px 0;
-      font-size: 1.1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-    }
-    .piloto h3 img.flag {
-      width: 22px;
-      height: auto;
-      border-radius: 3px;
-    }
-
-    /* Trofeos */
-    .trofeos {
-      margin-top: 30px;
-      padding: 15px;
-      background: #001f3f;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      color: #fff;
-    }
-    .trofeos h2 {
-      color: #fff;
-      margin-bottom: 10px;
-    }
-    .trofeos ul {
-      list-style: none;
-      padding: 0;
-    }
-    .trofeos ul li {
-      margin: 5px 0;
-      font-size: 1rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #001f3f;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-      }
-      nav ul.showing {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      .logo-f1 {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .logo-f1 img {
-        width: 80px;
-      }
-    }
-  </style>
+/* Modal */
+.modal { display: none; position: fixed; z-index: 50; left: 0; top: 0; width: 100%; height: 100%; overflow:auto; background-color: rgba(0,0,0,0.6);}
+.modal-content { background-color:#f4f4f9; margin:10% auto; padding:20px; border-radius:10px; max-width:800px; }
+.close { color:#333; float:right; font-size:28px; font-weight:bold; cursor:pointer; }
+.close:hover { color:red; }
+</style>
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">🏎 Alpine Academy</div>
-      <span class="menu-toggle">☰</span>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="f1.html">F1</a></li>
-        <li><a href="f2.html">F2</a></li>
-        <li><a href="f3.html">F3</a></li>
-        <li><a href="f4.html">F4</a></li>
-        <li><a href="f5.html">F5</a></li>
-        <li><a href="k6.html">K6</a></li>
-        <li><a href="historia.html">Historia</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="bg-gray-100 font-sans">
 
-  <div class="container">
-    <!-- Logo y título -->
-    <div class="logo-f1">
-      <img src="https://i.imgur.com/94qD5zk.png" alt="F1 Logo">
-      <h1>Equipo F1 - Alpine Royal Air Maroc</h1>
+<!-- Header -->
+<header class="bg-blue-800 text-white p-4 flex justify-between items-center sticky top-0 z-50">
+  <h1 class="font-bold text-xl">Alpine Academy</h1>
+  <nav>
+    <ul class="hidden md:flex space-x-4">
+      <li><a href="index.html" class="hover:text-yellow-400">Inicio</a></li>
+      <li><a href="historia.html" class="hover:text-yellow-400">Historia</a></li>
+      <li><a href="f1.html" class="hover:text-yellow-400">F1</a></li>
+      <li><a href="f2.html" class="hover:text-yellow-400">F2</a></li>
+      <li><a href="f3.html" class="hover:text-yellow-400">F3</a></li>
+      <li><a href="f4.html" class="hover:text-yellow-400">F4</a></li>
+      <li><a href="f5.html" class="hover:text-yellow-400">F5</a></li>
+      <li><a href="k6.html" class="hover:text-yellow-400">K6</a></li>
+      <li><a href="trofeos.html" class="hover:text-yellow-400">Trofeos</a></li>
+    </ul>
+    <!-- Hamburguesa -->
+    <div class="md:hidden flex flex-col cursor-pointer" id="menu-toggle">
+      <span class="w-6 h-0.5 bg-white mb-1"></span>
+      <span class="w-6 h-0.5 bg-white mb-1"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
     </div>
+  </nav>
+</header>
 
-    <!-- Pilotos -->
-    <section class="pilotos">
-     <div class="piloto">
-        <img src="https://i.imgur.com/Ju8Brg3.jpeg" alt="Charles Evans">
-        <h3><img class="flag" src="https://flagcdn.com/w20/ma.png" alt="Marruecos"> Charles Evans</h3>
-      </div>   
-      <div class="piloto">
-        <img src="https://i.imgur.com/6tU03vC.png alt="Victor Escalante">
-        <h3><img class="flag" src="https://flagcdn.com/w20/mx.png" alt="México"> Victor Escalante</h3>
-      </div>
-      <div class="piloto">
-        <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Mauro Gentile">
-        <h3><img class="flag" src="https://flagcdn.com/w20/ar.png" alt="Argentina"> Mauro Gentile</h3>
-      </div>
-      <div class="piloto">
-        <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="Ivan Flamini">
-        <h3><img class="flag" src="https://flagcdn.com/w20/ar.png" alt="Argentina"> Ivan Flamini</h3>
-      </div>
-    </section>
+<!-- Menú móvil -->
+<ul class="hidden bg-blue-800 text-white flex-col space-y-2 p-4 md:hidden" id="menu">
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="historia.html">Historia</a></li>
+  <li><a href="f1.html">F1</a></li>
+  <li><a href="f2.html">F2</a></li>
+  <li><a href="f3.html">F3</a></li>
+  <li><a href="f4.html">F4</a></li>
+  <li><a href="f5.html">F5</a></li>
+  <li><a href="k6.html">K6</a></li>
+  <li><a href="trofeos.html">Trofeos</a></li>
+</ul>
 
-    <!-- Trofeos -->
-    <section class="trophies py-10 bg-blue-900 text-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-6 text-center">🏆 Trofeos Históricos F1</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <div class="bg-blue-800 p-6 rounded-2xl shadow-lg text-center">
-        <h3 class="text-xl font-semibold">Constructores</h3>
-        <p class="text-lg mt-2">🏆 2 Campeonatos</p>
-      </div>
+<!-- Logo -->
+<section class="logo text-center my-6">
+  <img src="https://i.imgur.com/j2vi8Ln.jpeg" alt="Logo Alpine F1">
+</section>
 
-      <div class="bg-blue-800 p-6 rounded-2xl shadow-lg text-center">
-        <h3 class="text-xl font-semibold">Pilotos</h3>
-        <p class="text-lg mt-2">🏆 1 Campeonato</p>
-        <p class="text-lg mt-2">🥈 2 Subcampeonato</p>
-      </div>
-
-      <div class="bg-blue-800 p-6 rounded-2xl shadow-lg text-center">
-        <h3 class="text-xl font-semibold">Copas Internacionales</h3>
-        <p class="text-lg mt-2">🏆 1 Copa Libertadores</p>
-      </div>
-
-      <div class="bg-blue-800 p-6 rounded-2xl shadow-lg text-center col-span-1 md:col-span-2 lg:col-span-3">
-        <h3 class="text-xl font-semibold">Otros Logros</h3>
-        <p class="text-lg mt-2">⭐ Múltiples podios</p>
-      </div>
-
+<!-- Pilotos -->
+<section class="max-w-6xl mx-auto px-4">
+  <h2 class="text-2xl font-bold text-blue-800 mb-4">👨‍✈️ Pilotos Titulares</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <!-- Victor Escalante -->
+    <div class="bg-white rounded-lg p-4 shadow text-center">
+      <img src="https://i.imgur.com/PG5CErl.jpeg" alt="Victor Escalante" class="w-32 h-32 object-cover rounded-full mx-auto mb-2 border-4 border-blue-800">
+      <h3 class="font-bold text-lg text-blue-800">Victor Escalante</h3>
+      <p><img src="https://flagcdn.com/w20/mx.png" class="inline w-5 h-3 mr-1"> México</p>
+    </div>
+    <!-- Mauro Gentile -->
+    <div class="bg-white rounded-lg p-4 shadow text-center">
+      <img src="https://i.imgur.com/oHAIZNs.jpeg" alt="Mauro Gentile" class="w-32 h-32 object-cover rounded-full mx-auto mb-2 border-4 border-blue-800">
+      <h3 class="font-bold text-lg text-blue-800">Mauro Gentile</h3>
+      <p><img src="https://flagcdn.com/w20/ar.png" class="inline w-5 h-3 mr-1"> Argentina</p>
+    </div>
+    <!-- Ivan Flamini -->
+    <div class="bg-white rounded-lg p-4 shadow text-center">
+      <img src="https://i.imgur.com/iZvs6Sq.jpeg" alt="Ivan Flamini" class="w-32 h-32 object-cover rounded-full mx-auto mb-2 border-4 border-blue-800">
+      <h3 class="font-bold text-lg text-blue-800">Ivan Flamini</h3>
+      <p><img src="https://flagcdn.com/w20/ar.png" class="inline w-5 h-3 mr-1"> Argentina</p>
+    </div>
+    <!-- Charles Evans -->
+    <div class="bg-white rounded-lg p-4 shadow text-center">
+      <img src="https://i.imgur.com/Ju8Brg3.jpeg" alt="Charles Evans" class="w-32 h-32 object-cover rounded-full mx-auto mb-2 border-4 border-blue-800">
+      <h3 class="font-bold text-lg text-blue-800">Charles Evans</h3>
+      <p><img src="https://flagcdn.com/w20/ma.png" class="inline w-5 h-3 mr-1"> Marruecos</p>
     </div>
   </div>
 </section>
 
+<!-- Botón Clasificación -->
+<div class="text-center my-6">
+  <button id="openModal" class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow-lg">
+    📊 Ver Clasificación
+  </button>
+</div>
 
-  <script>
-    // Menú hamburguesa
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('nav ul');
+<!-- Trofeos -->
+<section class="max-w-6xl mx-auto px-4 mb-12">
+  <h2 class="text-2xl font-bold text-blue-800 mb-4">🏆 Trofeos Históricos F1</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold text-lg mb-2">Constructores</h3>
+      <ul class="list-disc list-inside">
+        <li>🏆 T65 – Alpine</li>
+        <li>🏆 T67 – Alpine</li>
+      </ul>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold text-lg mb-2">Pilotos</h3>
+      <ul class="list-disc list-inside">
+        <li>🏆 T51 – WDC: Omar de León</li>
+        <li>🥈 T67 – Subcampeonato: Piloto</li>
+      </ul>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold text-lg mb-2">Copas Internacionales</h3>
+      <ul class="list-disc list-inside">
+        <li>🏆 T50 – Copa Libertadores: Omar de León</li>
+      </ul>
+    </div>
+    <div class="bg-white p-4 rounded shadow">
+      <h3 class="font-semibold text-lg mb-2">Otros logros</h3>
+      <ul class="list-disc list-inside">
+        <li>⭐ Múltiples podios</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('showing');
-    });
-  </script>
+<!-- Modal Clasificación -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2 class="text-xl font-bold mb-4">📊 Clasificación F1 - Intercontinental Series</h2>
+    <table class="min-w-full border-collapse">
+      <thead>
+        <tr class="bg-blue-800 text-white">
+          <th class="border px-4 py-2">Posición</th>
+          <th class="border px-4 py-2">Piloto</th>
+          <th class="border px-4 py-2">Puntos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-gray-100"><td class="border px-4 py-2">1</td><td class="border px-4 py-2">Victor Escalante</td><td class="border px-4 py-2">120</td></tr>
+        <tr class="bg-white"><td class="border px-4 py-2">2</td><td class="border px-4 py-2">Mauro Gentile</td><td class="border px-4 py-2">110</td></tr>
+        <tr class="bg-gray-100"><td class="border px-4 py-2">3</td><td class="border px-4 py-2">Ivan Flamini</td><td class="border px-4 py-2">95</td></tr>
+        <tr class="bg-white"><td class="border px-4 py-2">4</td><td class="border px-4 py-2">Charles Evans</td><td class="border px-4 py-2">90</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-blue-800 text-white text-center p-4">
+  &copy; 2025 Alpine Academy - Intercontinental Series
+</footer>
+
+<script>
+// Menú móvil
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+toggle.addEventListener('click',()=>{menu.classList.toggle('hidden')});
+
+// Modal
+const modal = document.getElementById('modal');
+const btn = document.getElementById('openModal');
+const span = document.getElementById('closeModal');
+btn.onclick = ()=>{modal.style.display='block';}
+span.onclick = ()=>{modal.style.display='none';}
+window.onclick = e=>{if(e.target==modal){modal.style.display='none';}}
+</script>
 </body>
 </html>
